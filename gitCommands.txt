@@ -14,18 +14,35 @@ git commit: actualls starts the tracking of the files / folders you have in the 
 
 
 
-git push: to send files / folders from local GIT repository to a repository on the GITHUB
+
 
 git config: to tell GIT who we are.
+git config --global user.email {YOUR EMAIL}
+git config --global user.name {YOUR USERNAME}
+
+
+
+git remote: to communicate with a branch on GITHUB
+git remote add origin {LINK TO YOUR REPO}
+
+
+git branch: to create a different version of our project
+
+
+git push: to send files / folders from local GIT repository to a repository on the GITHUB
+git push -u origin main
+
+
+
 git pull: to recieve files / folders from a repository on GITHUB to a repository in our local GIT
 
 git clone: to recieve files / folders from a repository on GITHUB to a folder in our computer.
 
-git branch: to create a different version of our project
+
 
 git checkout: to change / create a branch
 
-git remote: to communicate with a branch on GITHUB
+
 
 
 
@@ -34,8 +51,15 @@ git remote: to communicate with a branch on GITHUB
 -m: message
 -A: All
 -M: Make
+-u: upstream: taking the code to higher level, i.e. from GIT to GITHUB
 
 
 
 
 
+touch: to create a file
+cd: to change directory, i.e. to either go back or go forward from your PWD
+pwd: shows the present working directory
+
+mkdir: to create a directory
+rmdir: to delete a directory
