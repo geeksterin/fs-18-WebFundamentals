@@ -3,8 +3,17 @@ pull or a clone: to copy the code from GIT / GITHUB
 
 git init: to initialize git tracking for a particluar folder
 git status: tells you which files / folders git is tracking currently
+
+
 git add: ready one or more file / folder for git to track
-git commit: actually start the tracking
+git add . / git add -A : ready all the files / folders to track. Git add adds the files / folders to a staging area.
+
+
+git commit: actualls starts the tracking of the files / folders you have in the staging area
+
+
+
+
 git push: to send files / folders from local GIT repository to a repository on the GITHUB
 
 git config: to tell GIT who we are.
@@ -21,5 +30,12 @@ git remote: to communicate with a branch on GITHUB
 
 
 
+-m / -A / -M : flags
+-m: message
+-A: All
+-M: Make
 
-git add . / git add -A : ready all the files / folders to track
+
+
+
+
