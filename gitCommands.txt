@@ -1,0 +1,25 @@
+push: to feed the code to GIT ? GITHUB
+pull or a clone: to copy the code from GIT / GITHUB
+
+git init: to initialize git tracking for a particluar folder
+git status: tells you which files / folders git is tracking currently
+git add: ready one or more file / folder for git to track
+git commit: actually start the tracking
+git push: to send files / folders from local GIT repository to a repository on the GITHUB
+
+git config: to tell GIT who we are.
+git pull: to recieve files / folders from a repository on GITHUB to a repository in our local GIT
+
+git clone: to recieve files / folders from a repository on GITHUB to a folder in our computer.
+
+git branch: to create a different version of our project
+
+git checkout: to change / create a branch
+
+git remote: to communicate with a branch on GITHUB
+
+
+
+
+
+git add . / git add -A : ready all the files / folders to track
