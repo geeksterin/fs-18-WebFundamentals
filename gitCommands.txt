@@ -76,3 +76,9 @@ The main benefit of forking is you can pull it into your local computer, do any 
 
 From there you can send those changes back to the owner in the form of a 
 PULL REQUEST
+
+
+
+
+git log
+git diff
