@@ -63,3 +63,16 @@ pwd: shows the present working directory
 
 mkdir: to create a directory
 rmdir: to delete a directory
+
+
+
+
+
+
+
+
+git forking: creating a copy into your own Github account.
+The main benefit of forking is you can pull it into your local computer, do any modifications and push it back to your repository.
+
+From there you can send those changes back to the owner in the form of a 
+PULL REQUEST
