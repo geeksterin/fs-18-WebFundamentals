@@ -1,24 +1,140 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Anchor Tag</title>
-    </head>
-    <body>
-        <a href="http://twitter.com" target="" title="">Twitter</a>
-        <a href="http://linkedin.com">Linkedin</a>
+  <head>
+    <title>Anchor Tag</title>
+  </head>
+  <body>
+    <!-- <a href="http://twitter.com" target="" title="">Twitter</a>
+    <a href="http://linkedin.com">Linkedin</a>
+
+    <a href="blockInline.html">Block & Inline Elements</a>
+
+    <a href="https://twitter.com">
+      <img
+        src="slider1.jpg"
+        alt="Image of Geekster Students"
+        width="400"
+        height="200"
+      />
+    </a> -->
+
+    <!-- You can put a block or an inline element inside a block element.
+        But only an inline element can reside inside an inline element -->
+
+    <!-- <p><a href="">Inline inside block</a></p> -->
+
+    <!-- <a href=""><p>Block inside inline, not allowed</p></a> -->
+
+    <!-- THIS IS WRONG -->
+    <!-- <a href="">
+            <div>
+                <h3></h3>
+                <p></p>
+                <ul></ul>
+            </div>
+        </a> -->
+
+    <!-- <p>
+      Hello everyone, my name is
+      <a href="https://github.com/abhinandan">Abhinandan</a>
+    </p> -->
+
+    <!-- <a href="https://twitter.com">Twitter</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com">Instagram</a> -->
+
+    <!-- //Relative & Absolute Paths -->
+
+    <!-- Absolute Path: which starts at the root folder, i.e. at the very beginning.
+
+    Relative Path: which start in your PWD -->
+
+    <!-- RELATIVE PATH -->
+    <!-- <img src="slider1.jpg" width="400" alt=""> -->
+
+    <!-- ABSOLUTE PATH -->
+    <!-- <img src="C:\xampp\htdocs\rohit\geekster\slider1.jpg" width="400" alt="Some image here"> -->
+
+    <!-- <img src="abu/images/slider4.jpg" alt="" width="400"> -->
+
+    <h2>Dwayne Johnson</h2>
+    <p>Popularly named <i><b>"The Rock"</b></i></p>
+    <img src="../abhinav/dwayne johnson.jpg" alt="The Rock" width="200" />
+
+    <p><em><strong>Jumanji</strong></em></p>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ex
+      assumenda consectetur iusto quibusdam nobis beatae minima dolore omnis
+      sunt dicta officia, nihil illum totam! Sunt modi voluptatum tenetur natus.
+    </p>
+
+    <!-- <p>Paragraph 1</p>
+    <p>Paragraph 2</p> -->
+
+    <!-- <p>
+        Rohit
+        Jain
+    </p> -->
+
+    <!-- <p>Line    Breaks
+    </p> -->
+
+    <!-- <p>Rohit Jain</p>
+
+
+    <pre>
+        Rohit
 
 
 
-        <a href="blockInline.html">Block & Inline Elements</a>
+        Jain</pre> -->
 
-        <a href="https://twitter.com">
-            <img src="slider1.jpg" alt="Image of Geekster Students" width="400" height="200">
-        </a>
+    <!-- Non Breaking Space -->
 
+    <!-- <p>Rohit&nbsp;&nbsp;&nbsp;Jain</p>    -->
 
-        //Relative & Absolute Paths
-        // Forms
+    <!-- <p>&nbsp;&nbsp;&nbsp;Rohit Jain</p> -->
 
+    <!-- <p>This is first section</p>
+        <hr>
+        <p>This is second section</p> -->
 
-    </body>
+    <!-- NESTING OF ELEMENTS -->
+    <style>
+a{
+    margin:6px;
+    display: inline-block;
+}
+</style>
+    <ul>
+      <li>
+        <a href="">Canada Immigration</a>
+        <ul>
+          <li><a href="">Canada Express Entry</a></li>
+          <li>
+            <a href="">Canada Super Visa</a>
+            <ul>
+              <li><a href="">Something</a></li>
+              <li><a href="">Another Something</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="">Canada PNP</a>
+        <ul>
+          <li><a href="">Canada Express Entry</a></li>
+          <li><a href="">Canada Super Visa</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="">Australia Immigration</a>
+        <ul>
+          <li><a href="">Canada Express Entry</a></li>
+          <li><a href="">Canada Super Visa</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
 </html>
