@@ -45,8 +45,6 @@ git checkout: to change / create a branch
 
 
 
-
-
 -m / -A / -M : flags
 -m: message
 -A: All
