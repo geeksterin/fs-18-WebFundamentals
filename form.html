@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML FORMS</title>
+  </head>
+  <body>
+
+    <!-- ASSIGNMENT: 
+    - for attribute in label
+    - novalidate, autocomplete
+
+-->
+
+
+
+    <form>
+        <!-- <label for=""></label> -->
+      <label>Name</label>
+      <input type="text" placeholder="Enter Your Name" required autofocus /><br />
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password" required /><br />
+
+      <label>DOB</label>
+      <input type="date" required /><br />
+
+      <label>Gender</label>
+      <input type="radio" name="gen" value="m" required />Male
+      <input type="radio" name="gen" value="f" required />Female
+      <input type="radio" name="gen" value="o" required />Other <br />
+
+      <label>Hobbies</label>
+      <input type="checkbox" value="sing" />Singing
+      <input type="checkbox" value="dance" />Dancing
+      <input type="checkbox" value="sleep" />Sleeping
+      <input type="checkbox" value="read" />Reading
+      <br />
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" /><br />
+
+      <label>Time</label><input type="time" /><br />
+
+      <label>Color</label>
+      <input type="color" /> <br />
+
+      <label>Range</label>
+      <input type="range" min="100" max="999" step="100" /> <br />
+
+      <label>Age</label>
+      <input type="number" min="18" max="60" step="4" /> <br />
+
+      <label>Hometown</label>
+      <select>
+        <option selected disabled value="">Select Hometown</option>
+        <option value="delhi">Delhi</option>
+        <option value="jaipur">Jaipur</option>
+        <option value="patna">Patna</option>
+        <option value="bhagalpur">Bhagalpur</option>
+        <option value="kolkata">Kolkata</option>
+      </select>
+      <br />
+
+      <label>Address</label>
+      <textarea placeholder="Full Postal Address" cols="40" rows="15"></textarea><br>
+
+      <label>Date Time</label>
+      <input type="datetime-local"> <br>
+
+      <label>Profile Picture</label>
+      <input type="file" multiple accept=".jpg,.png" > <br>
+      
+
+      <button type="button">Submit</button>
+
+      <!-- WE NEVER USE BUTTON TYPE BUTTON INSIDE FORMS -->
+
+      <button type="submit">Submit</button>
+      <button type="reset">Clear Form</button>
+      
+    </form>
+  </body>
+</html>
