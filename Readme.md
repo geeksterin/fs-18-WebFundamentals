@@ -2,7 +2,7 @@
 This is the Repository for MERN Stack Classes. Where we are currently learning HTML & CSS.
 
 
-## Today we studied about HTML Forms
+## Today we studied about Background, text & font properties
 
 ### Topics we have covered:
 1. Version Control
@@ -12,3 +12,8 @@ This is the Repository for MERN Stack Classes. Where we are currently learning H
 5. Cloning & Forking
 6. HTML Basics
 7. Tags: html, head, body, title, p, ul, ol, li, table, a, img, div, span
+8. CSS Introduction
+9. Box Model
+10. Margin & Padding
+11. Background & Foreground
+12. Units
