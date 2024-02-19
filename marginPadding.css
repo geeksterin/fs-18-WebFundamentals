@@ -1,0 +1,51 @@
+/* border-style: solid | dashed | dotted | inset | outset |groove | ridge */
+
+/* THE ORDER OF THREE PROPERTIES DOE S NOT MATTER IN THE SHORTHAND */
+
+/* border-style is a mandatory property for border to show */
+
+.box {
+  /* border-width: 5px;
+    border-style: solid;
+    border-color: red; */
+  color: green;
+  border: black solid 5px;
+}
+
+
+/* MARGIN: space between two elements. Space between borders of two elements */
+
+/* PADDING: space between an element's content & it's own border */
+
+/* #box1{
+    margin-bottom: 10px;
+    padding-left: 30px;
+} */
+
+
+
+#box1{
+    /* padding: 10px 11px 12px 13px; top right bottom left */
+    /* padding: 10px 11px 12px; top left-Right bottom */
+    /* padding: 10px 12px; top-bottom left-right */
+    /* padding: 12px; top-bottom-left-right */
+}
+
+
+
+/* ASSIGNMENT: box-sizing */
+
+
+
+
+
+
+
+#overflowing{
+    border: 2px solid red;
+    width: 300px;
+    height: 150px;
+    /* overflow: scroll; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

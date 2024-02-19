@@ -1,0 +1,33 @@
+/* Fixed Unit: px */
+
+/* Variable Unit: %, em, rem, vh, vw, dvh, svh, lvh */
+
+
+/* 16px = 1em = 1rem = 100% */
+
+/* p{
+    font-size: 3.5rem;
+} */
+
+/* em: looks for the property on the parent, if not found on the parent, then it behaves according to the formula */
+
+/* rem: does not look for the property on the parent, look up to the root element */
+
+/* vh: viewport height */
+/* vw: viewport width */
+
+
+html{
+    font-size: 40px;
+}
+
+#box{
+    font-size: 400px;
+    border: solid;
+    color: brown;
+    width: 80vw;
+}
+
+#box p{
+    font-size: 1rem;
+}

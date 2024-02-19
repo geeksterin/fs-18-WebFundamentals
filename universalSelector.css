@@ -1,0 +1,19 @@
+/* GROUPING */
+/* h2, ul, h3, p, a, table, th, td{
+    color: red;
+} */
+
+*{
+  color: red;  
+}
+
+/* h2, ul{
+    background-color: azure;
+} */
+
+div{
+    background-color: azure;
+}
+p{
+    color: blue;
+}

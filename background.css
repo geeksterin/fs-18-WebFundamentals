@@ -1,0 +1,27 @@
+/* background-color
+background-image
+background-repeat: repeat | no-repeat | repeat-x | repeat-y
+background-attachment: scroll | fixed
+background-position
+background-size (introduced in CSS 3): %, px, contain | cover
+*/
+
+/* SHORTHAND: shortcut */
+
+
+body{
+    
+    /* background-color: red;
+    background-image: url("assets/waving-hand.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  */
+   
+
+
+    /* background: red url("assets/waving-hand.png") no-repeat fixed center / cover; */
+
+
+}
+
