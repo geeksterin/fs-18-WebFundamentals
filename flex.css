@@ -1,0 +1,37 @@
+/* float */
+
+/* flex-direction: whether the child elements will be in a row or in a column
+justify-content: takes care of the horizontal alignment
+flex-start | flex-end | center | space-between | space-around | space-evenly
+
+flex-direction: row | column | row-reverse | column-reverse
+
+align-items: takes care of the vertical alignment
+stretch | flex-start | flex-end | center
+flex-wrap
+
+gap
+order */
+
+#boxes {
+  height: 400px;
+  width: 80vw;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.box {
+  border: 1px solid;
+}
+.red {
+  background-color: #f00;
+}
+.green {
+  background-color: #0f0;
+}
+.black {
+  background-color: #000;
+  color: #fff;
+}

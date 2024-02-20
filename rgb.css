@@ -1,0 +1,68 @@
+/* -name
+
+-hexadecimal value: 
+allowed chars: 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+always starts with a #
+after the #, there can be 3 or 6 characters
+
+
+
+- RGB value:
+allowed chars: 0,1,2,3....254,255
+
+
+- RGBA value
+
+*/
+
+p{
+    /* color: #ff0000; = #f00 */
+    /* color: #00ff00; = #0f0 */
+    /* color: #0000ff; = #00f */
+    /* color: #000000; = #000 */
+    /* color: #ffffff; = #fff */
+    /* color: #00ff00; */
+
+    /* color: rgb(255,0,0); */
+    /* color: rgb(0,255,0); */
+    /* color: rgb(0,0,255); */
+
+    /* color: rgb(0,0,0); */
+    /* color: rgb(255,255,255); */
+
+
+    /* color: #ff00ff; = #f0f*/
+
+    /* color: #654321; */
+
+    /* color: rgba(255,0,0,1); */
+
+    /* color: purple; */
+
+}
+
+/* Gradient: combination of 2 or more colors */
+/* background-color */
+/* background */
+
+/* 
+linear-gradient
+radial-gradient
+conic-gradient 
+*/
+
+
+
+body{
+    /* color: #112233; */
+    color: #123;
+
+    /* background-color: #ff00ff; */
+
+    /* background: linear-gradient(to bottom left, rgb(17, 51, 18), rgb(118, 76, 35), #fff); */
+
+
+    /* background: linear-gradient(to top, rgba(81, 14, 14, 1), rgba(81, 14, 14, 0.6), rgba(81, 14, 14, 0.1)); */
+
+
+}
