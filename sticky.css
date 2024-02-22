@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#left, #right{
+    padding: 30px;
+}
+#left{
+    width: 25%;
+    background-color: pink;
+}
+#right{
+    width: 75%;
+}
+#left h1{
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#left h3{
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+#left nav{
+    position: sticky;
+    top: 5px;
+}
+#left ul{
+    list-style: none;
+}
+#left ul a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: antiquewhite;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+}
+#right p{
+    padding: 0.5rem 0;
+}

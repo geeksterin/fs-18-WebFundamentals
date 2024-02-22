@@ -1,0 +1,25 @@
+/* z-index: accepts pnly numbers. Has no unit. The default value is auto */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#boxes{
+    width: 80vw;
+    height: 80vh;
+    background-color: beige;
+    position: relative;
+}
+.box{
+    border: 1px solid;
+    width: 50%;
+    height: 150px;
+    color: #fff;
+    position: absolute;
+}
+.red{background-color: red; z-index: 2;}
+.green{background-color: green; z-index: 3;}
+.blue{background-color: blue; z-index: 6;}
+.purple{background-color: purple;z-index: 5;}

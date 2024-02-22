@@ -10,11 +10,11 @@ a {
 ul {
   list-style: none;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 header {
-  background-color: #faa361;
+  background-color: #496070;
   height: 70px;
   display: flex;
   justify-content: space-between;
@@ -32,29 +32,101 @@ header ul li a {
   color: #fff;
   font-weight: 500;
 }
-#top-talent{
-    padding: 3rem 2rem;
-    background-color: #f1f1f1;
+#top-talent {
+  background-color: #f1f1f1;
 }
-.section-heading h2{
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
+#top-talent,
+#commitment {
+  padding: 3rem 2rem;
 }
-.section-content{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: ;
+.section-heading h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem auto 1rem;
+  width: 900px;
+}
+.section-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
 }
 
-#top-talent .init{
-    width: 30%;
-    margin: 1rem;
+#top-talent .init {
+  width: 30%;
+  margin: 1rem;
 }
-#top-talent .init img{
-    width: 60px;
+#top-talent .init img {
+  width: 60px;
+}
+
+#commitment {
+  background-image: url(assets/our-commitment-bg-1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#commitment .section-content{
+  justify-content: space-between;
+}
+#commitment .box {
+  width: 28%;
+  /* height: 20%; */
+  margin: 1rem;
+  text-align: center;
+  padding: 1%;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,.62);
+}
+#commitment .box img {
+  width: 100px;
+}
+#commitment .box h4{ 
+  padding: 30px 0;
+  font-size: 23px;
+}
+#commitment .box p, #commitment .box h4, #commitment h2 {
+  color: #fff;
+}
+
+
+
+#services .box {
+  background-color: #fff;
+  padding: 3rem 2rem;
+}
+#services .box .icon i {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+#services .box .icon i:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  top: -10px;
+  right: -20px;
+  z-index: -1;
+}
+#services .box h4 {
+  position: relative;
+}
+#services .box h4:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  background-color: #f1f1f1;
+  width: 200px;
+  height: 5px;
+}
+#services .box p{
+  margin-bottom: 2rem;
+}
+#services .box a{
+  color: green;
 }

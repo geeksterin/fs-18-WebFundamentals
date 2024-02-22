@@ -2,7 +2,7 @@
 This is the Repository for MERN Stack Classes. Where we are currently learning HTML & CSS.
 
 
-## Today we studied about Background, text & font properties
+## Today we studied about Positions & Pseudo Elements
 
 ### Topics we have covered:
 1. Version Control
@@ -17,3 +17,6 @@ This is the Repository for MERN Stack Classes. Where we are currently learning H
 10. Margin & Padding
 11. Background & Foreground
 12. Units
+13. Flex
+14. Positions
+15. Pseudo Elements & Classes

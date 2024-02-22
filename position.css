@@ -1,0 +1,54 @@
+/* Position: allows us to place any element at our place of choosing. */
+
+/* By default every element has position: static.
+Other values are: fixed, absolute, relative & sticky. */
+
+/* 
+FIXED - element is fixed on the page. Element's counting is done from body origins. Element is taken out of page flow.
+
+RELATIVE - element is not fixed on the page. Element's counting is done from it's relative position. Element is not taken out of page flow.
+
+ABSOLUTE - element is not fixed on the page. Element is taken out of page flow.
+
+Element's counting is done from:
+-body origin, if no previous element is positioned
+-that previous element which has position
+
+STICKY - element is not fixed on the page. 
+
+top, bottom, left & right: can be used on any positioned element
+
+With position, overlapping comes in. Overlapping can be managed, we use Z-INDEX
+
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#head {
+  border: 2px solid;
+  background-color: #3b5998;
+  color: #fff;
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+
+
+
+
+
+#parent{
+    border: 2px solid;
+    padding: 3rem;
+    position: relative;
+}
+#child{
+    border: 2px dashed;
+    padding: 1rem;
+    position: absolute;
+    top: 100px;
+}
