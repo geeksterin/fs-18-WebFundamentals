@@ -26,21 +26,29 @@
         <header>
           <div class="top">
             <img src="assets/logo.png" class="logo" alt="" />
-            <div class="search">
-              <form action="">
-                <input type="text" placeholder="Search" />
-                <button type="submit">
-                  <img src="assets/magnify.svg" alt="" />
-                </button>
-              </form>
-              <i class="fa-solid fa-microphone"></i>
+
+            <div class="search-flex">
+              <div class="search">
+                <form action="">
+                  <input type="text" placeholder="Search" />
+                  <div class="lens">
+                    <i class="fa-solid fa-search"></i>
+                  </div>
+                </form>
+              </div>
+
+              <div class="microphone">
+                <i class="fa-solid fa-microphone"></i>
+              </div>
             </div>
+
             <div class="icons">
               <img src="assets/video-plus.svg" alt="" />
               <img src="assets/bell.svg" alt="" />
               <img src="https:unsplash.it/36/36" class="loggedin-user" alt="" />
             </div>
           </div>
+
           <div class="categories">
             <div class="category-wrapper">
               <button class="category active">All</button>
@@ -215,7 +223,7 @@
         </div>
 
         <div class="read-more">
-            <button>Show More <i class="fa-solid fa-chevron-down"></i></button>
+          <button>Show More <i class="fa-solid fa-chevron-down"></i></button>
         </div>
 
         <div class="video-wrapper">
