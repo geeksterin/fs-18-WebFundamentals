@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REvision</title>
+        <style>
+
+            .mainhead {
+
+            }
+            .temp {
+                border: 1px solid black;
+                position: relative;
+            }
+
+            .temp p {
+                position: absolute;
+                top: 2px;
+                right: 5px;
+            }
+            .temp::before{
+                content: "hi";
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="mainhead"> Hello</h1>
+        <div>
+            <div>
+                <div class="temp">
+                    <h1> Hello</h1>
+                    <p> Hi</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
