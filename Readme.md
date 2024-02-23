@@ -2,7 +2,7 @@
 This is the Repository for MERN Stack Classes. Where we are currently learning HTML & CSS.
 
 
-## Today we studied about Positions & Pseudo Elements
+## Today we studied about making Youtube UI Clone
 
 ### Topics we have covered:
 1. Version Control
