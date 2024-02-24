@@ -1,0 +1,47 @@
+Text Properties:
+
+1. Color: Used to change the colour of font
+2. Font-size: used to change the size of font
+3. Font-family: used to change the style of font like cursive, time new roman
+4. Text-align: used to align text in the centre, left or right
+5. text-decoration: used to add underlines, overlies etc. default value is none
+6. Text-transformation: used to make text uppercase, lowercase etc.
+7. Font-weight: used to make font bold or extra bold
+8. font-style: Used to make font italic etc.
+9. Line-height: Used to adjust the height between multiple liens of text
+10. letter-spacing: used to adjust space between individual letters in text
+
+
+Spacing Properties:
+
+1. Margin: Used to give space between border and outer elements
+2. Padding: Used to give space between border and inner content
+3. width,height: used to adjust width and height
+4. Box-shadow: 1px 2px 10px black ( Used to give shadow to box : left right fade colour )
+
+Flex Properties:
+
+1. display: flex 
+2. flex-direction: Used to give direction to the flex ( default : row )
+3. Justify-content: Used to align things on the direction of flex
+4. align-items: Used to align things on the direction opposite to flex
+5. Flex-wrap: If things are not fitting in single row they should  automatically go to next row
+6. gap: Used to give gap between the flex children’s
+
+Extra Properties:
+
+1. Background-image : url() used to give image in background 
+2. background-color: used to give colour to background
+3. background: linear-gradient() or radial-gradient() ( Combination of colours )
+4. Position: fixed ( This element well be fixed on the screen means even if you scroll it will still remain on the same position and practically used to fixed headers )
+5. Position: absolute ( used to manually assign spacing from left, right,top,bottom) => This spacing will be calculated from the first parent who will be having position relative 
+
+
+
+
+
+
+
+
+
+
