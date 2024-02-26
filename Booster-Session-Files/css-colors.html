@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Colors</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            .container {
+                
+            }
+
+            .marker {
+                width: 240px;
+                height: 30px;
+                margin: 20px auto;
+            }
+            .red {
+             background: linear-gradient(
+                rgb(122, 73, 14),
+                rgb(245, 62, 113),
+                rgb(162, 27, 27)
+                );
+
+                box-shadow: 0px 0px 20px  rgba(83, 14, 14, 0.8);;
+            }
+            .green {
+                background: linear-gradient(#55680d, #71f53e, #116c31);
+                box-shadow: 0 0 20px  #3b7e20cc;
+            }
+            .blue {
+                background: linear-gradient(
+                hsl(186, 76%, 16%),
+                hsl(223, 90%, 60%),
+                hsl(240, 56%, 42%)
+                );
+                box-shadow: 0 0 20px 0 #3b7e20cc;
+           
+            }
+            .first {
+                width: 50px;
+                height: 30px;
+                display: inline-block;
+        
+            }
+            .second {
+                width: 150px;
+                height: 30px;
+                background-color: rgba(255, 255, 255, 0.584);
+                display: inline-block;
+                border-left: 10px double black;
+             
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Color Makers</h1>
+        <div class="container">
+            <div class="marker red">
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+            <div class="marker green">
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+            <div class="marker blue">
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </div>
+    </body>
+</html>
