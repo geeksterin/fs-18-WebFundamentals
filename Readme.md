@@ -2,7 +2,7 @@
 This is the Repository for MERN Stack Classes. Where we are currently learning HTML & CSS.
 
 
-## Today we studied about making Youtube UI Clone
+## Today we studied about making Grid System in CSS
 
 ### Topics we have covered:
 1. Version Control
@@ -20,3 +20,4 @@ This is the Repository for MERN Stack Classes. Where we are currently learning H
 13. Flex
 14. Positions
 15. Pseudo Elements & Classes
+16. Grid System
