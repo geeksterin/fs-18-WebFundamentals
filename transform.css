@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TRANSFORM: 
+    TRANSLATE: moving an element. Can accept 1 or 2 arguments. Accepted units: px, em, rem, %, vh, vw.
+    Single argument to translate means only horizontal movement
+
+    ROTATE: rotating on an axis. Accepted units: deg
+
+    SCALE: growing or shrinking. Accepted units: none (only accepts numbers). Can accept 1 or 2 arguments.
+    Single argument to scale means 2D movement
+
+    SKEW : rotating as well as tilting. Accepted units: deg
+*/
+
+#wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: 5px solid red;
+    width: 120px;
+    height: 120px;
+    /* transform: translate(10rem, 20rem); */
+    /* transform: translate(10rem); */
+
+    /* transform: rotate(-360deg); */
+
+    /* transform: scale(0.75, 0.75); */
+
+    /* transform: skew(10deg, 30deg); */
+
+
+
+    /* transform: translateY(10rem); */
+
+    /* transform: scaleY(2); */
+
+    /* transform: rotateX(45deg);
+    transform: rotateY(45deg); */
+
+
+}
