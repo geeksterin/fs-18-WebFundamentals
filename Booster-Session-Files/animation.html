@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animations</title>
+        <style>
+             @keyframes changecolor {
+                0% {
+                    background-color: yellow;
+                }
+                25%{
+                    background-color: pink;
+                }
+                50% {
+                    background-color: black;
+                }
+                100% {
+                    background-color: red;
+                }
+            }
+            .box {
+                width: 200px;
+                height: 200px;
+                border-radius: 20px;
+                background-color: yellow;
+                animation-name: changecolor;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>
