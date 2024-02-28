@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Transition is the ability of an element to smoothly change its shape, size or its place on the webpage */
+/* Transition is the ability to control the timing of the change in its shape, size or place of an element */
+
+/* TRANSITIONS ONLY HAPPEN ON MOUSEOVER (HOVER) */
+
+
+/* timing-function: ease | ease-in | ease-out | ease-in-out | linear */
+
+.box{
+    border: 5px solid red;
+    width: 150px;
+    height: 150px;
+    /* transition-property: transform, background-color, border-radius, padding, color, margin;
+    transition-duration: 10s;
+    transition-delay: 1s;
+    transition-timing-function: linear; */
+
+    transition: all 5s 1s linear;
+    
+}
+
+.box:hover{
+    transform: rotate(180deg);
+    background-color: #000;
+    border-radius: 50%;
+    padding: 30px;
+    margin: 30px;
+    color: #fff;
+}
+
+
+button{
+    padding: 10px 30px;
+    border: 3px solid;
+    background-color: #faa361;
+    border-radius: 25px;
+    text-transform: uppercase;
+    box-shadow: 2px 3px 4px 3px rgba(0,0,0,0.4);
+    transition: all 500ms;
+}
+button:hover{
+    box-shadow: none;
+    transform: translate(2px, 3px);
+}
