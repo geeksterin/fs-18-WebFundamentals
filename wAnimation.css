@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ball{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #faa361;
+    animation: bounce 4s infinite alternate;
+    position: absolute;
+}
+
+@keyframes bounce{
+    0%{top: 0; left: 0;}
+    25%{top: 200px; left: 200px}
+    50%{top: 0; left: 400px;}
+    75%{top: 200px; left: 600px;}
+    100%{top: 0; left: 800px;}
+}
+@keyframes bounceSmall{
+    0%{top: 0; left: 0;}
+    25%{top: 200px; left: 20%}
+    50%{top: 0; left: 40%;}
+    75%{top: 200px; left: 60%;}
+    100%{top: 0; left: 80%;}
+}
+
+
+@media all and (max-width: 950px){
+    .ball{
+        width: 70px;
+        height: 70px;
+        animation: bounceSmall 4s infinite alternate;
+    }
+}

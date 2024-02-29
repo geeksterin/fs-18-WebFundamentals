@@ -2,7 +2,7 @@
 This is the Repository for MERN Stack Classes. Where we are currently learning HTML & CSS.
 
 
-## Today we studied about making Grid System in CSS
+## Today we studied about making Media Queries in CSS
 
 ### Topics we have covered:
 1. Version Control
@@ -21,3 +21,7 @@ This is the Repository for MERN Stack Classes. Where we are currently learning H
 14. Positions
 15. Pseudo Elements & Classes
 16. Grid System
+17. Transform
+18. Transition
+19. Animation
+20. Media Queries
