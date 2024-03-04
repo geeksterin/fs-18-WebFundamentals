@@ -5,6 +5,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
+
 h1,
 h2,
 h3,
@@ -14,9 +15,11 @@ h6 {
   font-family: Montserrat, sans-serif;
   font-weight: 700;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   display: inline-block;
@@ -94,11 +97,13 @@ nav .icons i {
   padding-bottom: 3rem;
   position: relative;
 }
+
 .text h1 {
   font-size: 3.5rem;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
 .text p {
   margin-bottom: 2rem;
   color: #dfe5ec;
@@ -106,6 +111,7 @@ nav .icons i {
   padding-right: 1.5rem;
   font-size: 18px;
 }
+
 .text a {
   padding: 1rem 2.25rem;
   background-color: #14bf98;
@@ -115,6 +121,7 @@ nav .icons i {
   font-size: 12px;
   font-weight: 700;
 }
+
 #overlay {
   position: absolute;
   top: 0;
@@ -129,6 +136,7 @@ nav .icons i {
   background-color: #fbfbfb;
   padding: 6.25rem 4.5rem;
 }
+
 #services .section-heading,
 #projects .section-heading,
 #projects .categories {
@@ -137,6 +145,7 @@ nav .icons i {
   margin-right: auto;
   text-align: center;
 }
+
 #services .section-heading h2,
 #projects .section-heading h2 {
   color: #484a46;
@@ -144,6 +153,7 @@ nav .icons i {
   font-family: Montserrat;
   font-size: 1.75rem;
 }
+
 .green {
   text-transform: uppercase;
   font-size: 12px;
@@ -158,18 +168,22 @@ nav .icons i {
   align-items: center;
   justify-content: space-between;
 }
+
 .service {
   width: 30%;
   background-color: #fff;
 }
+
 .service img {
   width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+
 .service .content {
   position: relative;
 }
+
 .service .content a {
   position: absolute;
   bottom: -10px;
@@ -179,10 +193,12 @@ nav .icons i {
 #projects {
   padding: 6.25rem 4.5rem;
 }
+
 #projects .categories {
   width: 50%;
   margin-bottom: 2rem;
 }
+
 #projects .categories a {
   background-color: #f1f4f7;
   color: #7b7e85;
@@ -193,6 +209,7 @@ nav .icons i {
   margin: 0 0.25rem;
   border-radius: 5px;
 }
+
 #projects .categories a.active {
   background-color: #14bf98;
   color: #fff;
@@ -203,12 +220,14 @@ nav .icons i {
   position: relative;
   overflow: hidden;
 }
+
 #projects .project img {
   width: 100%;
   height: 100%;
   display: block;
   transition: all 300ms;
 }
+
 #projects .project p {
   position: absolute;
   left: 0;
@@ -224,9 +243,90 @@ nav .icons i {
   opacity: 0;
   transition: all 300ms;
 }
-#projects .project:hover img{
-    transform: scale(1.2);
+
+#projects .project:hover img {
+  transform: scale(1.2);
 }
-#projects .project:hover p{
-    opacity: 1;
+
+#projects .project:hover p {
+  opacity: 1;
+}
+
+/* INTRO */
+
+#intro {
+  margin: 7rem 0px;
+
+}
+
+
+#intro .container {
+  padding: 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  grid-template-rows: 1fr;
+  column-gap: 2rem;
+
+}
+
+
+.first {
+
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+#intro .section-title {
+  color: #14bf98;
+  font: 500 0.81rem / 1.12rem "Montserrat", sans-serif;
+}
+
+.basic-1 h2 {
+  margin-bottom: 1.3rem;
+  color: #484a46;
+  font: 700 1.81rem / 2.12rem "Montserrat", sans-serif;
+
+}
+
+#intro p {
+  color: #484a46;
+  font: 400 1rem / 1.5rem "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#intro .testimonial-text {
+  font-style: italic;
+}
+
+#intro .testimonial-author {
+  color: #484a46;
+  font: 700 1rem/ 1.37rem "Montserrat", sans-serif;
+  ;
+}
+
+.second {
+  text-align: center;
+  overflow: hidden;
+}
+
+.second img {
+  width: 85%;
+}
+
+@media screen and (max-width: 600px) {
+  #intro .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
+  }
+
+  .first {
+    padding: 0px;
+  }
+
+  .second img {
+    width: 100%;
+  }
+
 }
