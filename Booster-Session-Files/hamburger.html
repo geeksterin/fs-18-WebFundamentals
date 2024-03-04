@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/087ba84a5c.js" crossorigin="anonymous"></script>
+        <title>Hamburger</title>
+        <style>
+            nav {
+                display: flex;
+                justify-content: space-between;
+                background-color: #d5d5d5;
+            }
+            nav ul {
+                display: flex;
+                gap: 10px;
+                list-style-type: none;
+            }
+            nav i {
+                font-size: 30px;
+            }
+            .burger {
+                display: none;
+            }
+
+            @media screen and (max-width: 600px){
+               .items {
+                display: none;
+               }
+               .burger {
+                display: block;
+               }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <h2>
+                My Website
+            </h2>
+            <ul class="items">
+                <li> Home</li>
+                <li> Home</li>
+                <li> Home</li>
+                <li> Home</li>
+                <li> Home</li>
+                <li> Home</li>
+            </ul>
+            <div class="burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </body>
+</html>
