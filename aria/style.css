@@ -256,7 +256,6 @@ nav .icons i {
 
 #intro {
   margin: 7rem 0px;
-
 }
 
 
@@ -289,7 +288,7 @@ nav .icons i {
 
 }
 
-#intro p {
+#intro p, #cards p {
   color: #484a46;
   font: 400 1rem / 1.5rem "Montserrat", sans-serif;
   margin-bottom: 1rem;
@@ -314,7 +313,39 @@ nav .icons i {
   width: 85%;
 }
 
+
+
+#cards h2 {
+  color: #484a46;
+  font: 700 1.2rem / 2.12rem "Montserrat", sans-serif;
+}
+
+#cards .container {
+  padding: 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+}
+
+#cards .card img {
+  width: 120px;
+  height: 100px;
+}
+
+#cards .card {
+  padding: 1rem;
+
+}
+
+
+
+
 @media screen and (max-width: 600px) {
+  #intro {
+    margin: 0rem 0px;
+  }
+
   #intro .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -328,5 +359,17 @@ nav .icons i {
   .second img {
     width: 100%;
   }
+
+  #cards .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1rem;
+  }
+
+  #cards .card {
+    padding: 0.3rem;
+    text-align: center;
+  }
+
 
 }
