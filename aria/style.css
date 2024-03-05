@@ -147,7 +147,8 @@ nav .icons i {
 }
 
 #services .section-heading h2,
-#projects .section-heading h2 {
+#projects .section-heading h2,
+#contact .section-heading h2 {
   color: #484a46;
   margin-bottom: 3.25rem;
   font-family: Montserrat;
@@ -258,19 +259,15 @@ nav .icons i {
   margin: 7rem 0px;
 }
 
-
 #intro .container {
   padding: 0px 5%;
   display: grid;
   grid-template-columns: 1fr 1.7fr;
   grid-template-rows: 1fr;
   column-gap: 2rem;
-
 }
 
-
 .first {
-
   display: flex;
   align-items: center;
   padding: 2rem;
@@ -285,10 +282,10 @@ nav .icons i {
   margin-bottom: 1.3rem;
   color: #484a46;
   font: 700 1.81rem / 2.12rem "Montserrat", sans-serif;
-
 }
 
-#intro p, #cards p {
+#intro p,
+#cards p {
   color: #484a46;
   font: 400 1rem / 1.5rem "Montserrat", sans-serif;
   margin-bottom: 1rem;
@@ -301,7 +298,6 @@ nav .icons i {
 #intro .testimonial-author {
   color: #484a46;
   font: 700 1rem/ 1.37rem "Montserrat", sans-serif;
-  ;
 }
 
 .second {
@@ -312,8 +308,6 @@ nav .icons i {
 .second img {
   width: 85%;
 }
-
-
 
 #cards h2 {
   color: #484a46;
@@ -335,11 +329,196 @@ nav .icons i {
 
 #cards .card {
   padding: 1rem;
-
 }
 
+/* CONTACT */
 
+#contact {
+  background-color: #fbfbfb;
+  padding: 6.25rem 4.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+#contact .left {
+  width: 48%;
+}
+#contact .section-heading h2 {
+  margin-bottom: 1.5rem;
+}
+#contact .coffee,
+#contact .info,
+#contact .info a {
+  color: #787976;
+  margin-bottom: 1.25rem;
+}
+#contact .info a {
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+#contact .info i {
+  color: #14bf98;
+}
+#contact .info p {
+  margin-bottom: 0.5rem;
+}
+#contact h3 {
+  color: #484a46;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
 
+#contact .icons a {
+  position: relative;
+  display: inline-block;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+#contact .icons a span {
+  position: absolute;
+  background-image: url(assets/hexagon-green.svg);
+  background-position: center;
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-size: 3.25rem;
+  background-repeat: no-repeat;
+  transition: all 300ms;
+}
+#contact .icons a i {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 300ms;
+}
+#contact .icons a:hover i {
+  color: #14bf98;
+}
+#contact .icons a:hover span {
+  background-image: none;
+  background-color: #fff;
+}
+
+#contact .right {
+  width: 48%;
+}
+
+#contact .right input[type="text"],
+#contact .right textarea {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.3125rem;
+  border: 1px solid #dadada;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  color: #787976;
+  width: 100%;
+}
+#contact .right input[type="text"] {
+  height: 3rem;
+}
+#contact .right textarea {
+  height: 8rem;
+}
+
+#contact .right .form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+#contact .right .form-group label {
+  position: absolute;
+  left: 1.375rem;
+  top: 0.8125rem;
+  color: #787976;
+  font-size: 0.87rem;
+  transition: all 300ms;
+}
+#contact .right input[type="text"]:focus + label,
+#contact .right textarea:focus + label {
+  font-size: 0.7rem;
+  top: 0.5rem;
+}
+
+#contact .right .agree,
+#contact .right .agree a {
+  font-size: 0.875rem;
+  color: #787976;
+}
+#contact .right .agree a {
+  text-decoration: underline;
+}
+
+#contact .right button {
+  width: 100%;
+  background-color: #14bf98;
+  color: #fff;
+  border: 2px solid #14bf98;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 300ms;
+}
+#contact .right button:hover {
+  background-color: #fff;
+  color: #14bf98;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #113448;
+  padding-top: 5rem;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  font-size: 14px;
+}
+footer,
+footer a {
+  color: #fff;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .top h2 {
+  margin-bottom: 1rem;
+}
+footer .top .left {
+  width: 40%;
+}
+footer .top .left p {
+  line-height: 1.5;
+}
+
+footer .top .right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .top .right ul {
+}
+footer .top .right a {
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+}
+
+footer .bottom {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
 
 @media screen and (max-width: 600px) {
   #intro {
@@ -370,6 +549,4 @@ nav .icons i {
     padding: 0.3rem;
     text-align: center;
   }
-
-
 }
