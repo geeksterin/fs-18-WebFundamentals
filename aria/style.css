@@ -183,12 +183,57 @@ nav .icons i {
 
 .service .content {
   position: relative;
+  padding: 2.25rem 2.5rem 2.125rem 2.5rem;
+}
+.service .content h3 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+  color: #484a46;
+}
+.service .content p {
+  line-height: 1.56rem;
+  margin-bottom: 1rem;
+}
+.service .content ul {
+  margin-bottom: 1.5rem;
+}
+.service .content p,
+.service .content ul {
+  color: #787976;
+}
+.service .content ul li {
+  padding-left: 0.625rem;
+  margin-bottom: 0.325rem;
+  display: flex;
+}
+.service .content ul li i {
+  color: #14bf98;
+  font-size: 0.5rem;
+  line-height: 1.375rem;
+  margin-right: 0.625rem;
+}
+.service .content h4 {
+  margin-bottom: 0.25rem;
+  color: #484a46;
+  font: 700 1rem / 1.5rem "Montserrat", sans-serif;
+  text-align: center;
 }
 
 .service .content a {
+  display: inline-block;
+  padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
+  border: 0.125rem solid #14bf98;
+  border-radius: 0.25rem;
+  background-color: #14bf98;
+  color: #fff;
+  font: 700 0.75rem / 0 "Montserrat", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
   position: absolute;
-  bottom: -10px;
-  left: 45%;
+  left: 35%;
+  bottom: -24px;
 }
 
 #projects {
@@ -273,7 +318,8 @@ nav .icons i {
   padding: 2rem;
 }
 
-#intro .section-title, #callme .section-title {
+#intro .section-title,
+#callme .section-title {
   color: #14bf98;
   font: 500 0.81rem / 1.12rem "Montserrat", sans-serif;
 }
@@ -455,8 +501,8 @@ nav .icons i {
   transition: all 300ms;
 }
 
-#contact .right input[type="text"]:focus+label,
-#contact .right textarea:focus+label {
+#contact .right input[type="text"]:focus + label,
+#contact .right textarea:focus + label {
   font-size: 0.7rem;
   top: 0.5rem;
 }
@@ -529,7 +575,8 @@ footer .top .right {
   justify-content: space-between;
 }
 
-footer .top .right ul {}
+footer .top .right ul {
+}
 
 footer .top .right a {
   text-decoration: underline;
@@ -578,16 +625,14 @@ footer .bottom {
 }
 
 #callme h2 {
-
   margin-bottom: 1.3rem;
   color: white;
   font: 700 1.81rem / 2.12rem "Montserrat", sans-serif;
   margin-top: 0.5rem;
-
-
 }
 
-#callme p, li {
+#callme p,
+#callme li {
   color: #dfe5ec;
   font: 400 1rem / 1.5rem "Montserrat", sans-serif;
 }
@@ -614,7 +659,8 @@ footer .bottom {
   color: #14bf98;
 }
 
-#callme .left, .right {
+#callme .left,
+#callme .right {
   padding: 5rem;
 }
 
@@ -632,8 +678,8 @@ footer .bottom {
   transition: all 300ms;
 }
 
-
-#callme .right input[type="text"], select {
+#callme .right input[type="text"],
+select {
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
   padding-left: 1.3125rem;
@@ -674,37 +720,27 @@ footer .bottom {
   transition: ease-in-out 300ms;
 }
 
-
-
-
 #callme button:hover {
   background: transparent;
   cursor: pointer;
   border: 2px solid #14bf98;
 }
 
-
-
-
-
 @media screen and (max-width: 600px) {
   #callme .container {
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 2rem;
   }
 
-  #callme .left, .right {
+  #callme .left,
+  .right {
     padding: 1rem;
   }
 }
 
-
-
-#callme .right input[type="text"]:focus+label {
+#callme .right input[type="text"]:focus + label {
   font-size: 0.7rem;
   top: 0.2rem;
-
 }
