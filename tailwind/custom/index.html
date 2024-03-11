@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav class="flex justify-between items-center px-16 py-7">
+        <a href="">
+          <img src="assets/logo.png" alt="" class="w-2/5" />
+        </a>
+        <button
+          type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden block"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+        <div class="lg:block hidden">
+          <ul class="flex font-bold text-base">
+            <li><a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Services</a></li>
+            <li>
+              <a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Apply for Jobs</a>
+            </li>
+            <li><a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Contact Us</a></li>
+            <li>
+              <a
+                href=""
+                class="xl:px-3 xl:mx-3 px-2 mx-2 hire text-white rounded py-1 px-4"
+                >Hire Developers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section
+        id="hero"
+        class="px-16 py-3 lg:flex justify-between items-center"
+      >
+        <div class="left py-3 lg:w-6/12 w-full">
+          <h1 class="lg:text-5xl text-3xl font-black lg:leading-[4rem] mb-5">
+            The right developers for your project.
+          </h1>
+          <p class="mb-5 text-gray-500">
+            This website is an outsourcing staffing solution that can integrate
+            with your team to help you create, design and scale on time and on
+            budget.
+          </p>
+          <a
+            href=""
+            class="hire text-white py-1 px-4 rounded-md text-xl font-bold"
+            >Hire Developers</a
+          >
+        </div>
+        <div class="right py-3 lg:w-5/12 w-full">
+          <img src="assets/heroImage.webp" class="ml-auto mr-auto" alt="" />
+        </div>
+      </section>
+
+      <section id="trainers" class="lg:px-16 px-8 py-10">
+        <div
+          class="heading flex flex-col items-center justify-center text-center lg:w-1/2 w-full mx-auto py-6"
+        >
+          <h2 class="uppercase text-4xl font-medium mb-4">Meet Our Trainers</h2>
+          <p class="leading-7 text-lg text-gray-500">
+            Our trainers are are here to dedicate the time and effort that you
+            need to get in the best shape of your life
+          </p>
+        </div>
+
+        <div id="trainers" class="lg:flex justify-between py-3">
+          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
+            <img src="assets/trainer-1.avif" alt="" class="w-full rounded-lg" />
+            <div class="content py-4 text-center">
+              <h3 class="text-xl font-bold">Trainer 1</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
+            <img src="assets/trainer-2.avif" alt="" class="w-full rounded-lg" />
+            <div class="content py-4 text-center">
+              <h3 class="text-xl font-bold">Trainer 2</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
+            <img src="assets/trainer-3.avif" alt="" class="w-full rounded-lg" />
+            <div class="content py-4 text-center">
+              <h3 class="text-xl font-bold">Trainer 3</h3>
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
