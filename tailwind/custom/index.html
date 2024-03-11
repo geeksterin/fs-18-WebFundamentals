@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind</title>
+    <title>Codebase</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,110 +11,96 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="codebase.css" />
   </head>
   <body>
     <div id="wrapper">
-      <nav class="flex justify-between items-center px-16 py-7">
-        <a href="">
+      <nav class="flex items-center justify-between lg:px-16 px-8 py-7">
+        <a href="" class="logo">
           <img src="assets/logo.png" alt="" class="w-2/5" />
         </a>
-        <button
-          type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden block"
-        >
+        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 lg:hidden block">
           <span class="sr-only">Open main menu</span>
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
-        <div class="lg:block hidden">
-          <ul class="flex font-bold text-base">
-            <li><a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Services</a></li>
+        <div class="menu lg:flex hidden items-center justify-between">
+          <ul class="flex px-6">
             <li>
-              <a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Apply for Jobs</a>
+              <a class="inline-block xl:px-3 xl:mx-3 lg:px-2 xl:mx-2 font-bold text-base">Services</a>
             </li>
-            <li><a href="" class="xl:px-3 xl:mx-3 px-2 mx-2">Contact Us</a></li>
             <li>
-              <a
-                href=""
-                class="xl:px-3 xl:mx-3 px-2 mx-2 hire text-white rounded py-1 px-4"
-                >Hire Developers</a
+              <a class="inline-block xl:px-3 xl:mx-3 lg:px-2 xl:mx-2 font-bold text-base"
+                >Apply for Jobs</a
+              >
+            </li>
+            <li>
+              <a class="inline-block xl:px-3 xl:mx-3 lg:px-2 xl:mx-2 font-bold text-base"
+                >Contact Us</a
               >
             </li>
           </ul>
-        </div>
-      </nav>
-
-      <section
-        id="hero"
-        class="px-16 py-3 lg:flex justify-between items-center"
-      >
-        <div class="left py-3 lg:w-6/12 w-full">
-          <h1 class="lg:text-5xl text-3xl font-black lg:leading-[4rem] mb-5">
-            The right developers for your project.
-          </h1>
-          <p class="mb-5 text-gray-500">
-            This website is an outsourcing staffing solution that can integrate
-            with your team to help you create, design and scale on time and on
-            budget.
-          </p>
           <a
             href=""
-            class="hire text-white py-1 px-4 rounded-md text-xl font-bold"
+            class="inline-block text-white font-bold text-base hire py-1 px-4 rounded-md"
             >Hire Developers</a
           >
         </div>
-        <div class="right py-3 lg:w-5/12 w-full">
-          <img src="assets/heroImage.webp" class="ml-auto mr-auto" alt="" />
+      </nav>
+
+      <section id="hero" class="lg:px-16 px-8 py-3 lg:flex items-center justify-between">
+        <div class="left py-3 lg:w-6/12">
+          <h1 class="lg:text-5xl text-3xl font-black lg:leading-[4rem] mb-5">The right developers for your project.</h1>
+          <p class="mb-5 text-gray-500">This website is an outsourcing staffing solution that can integrate with your team to help you create, design and scale on time and on budget.</p>
+          <a
+            href=""
+            class="inline-block text-white font-bold text-xl hire py-1 px-4 rounded-md"
+            >Hire Developers</a
+          >
+        </div>
+        <div class="right py-3 lg:w-5/12">
+          <img src="assets/heroImage.webp" class="mx-auto" alt="">
         </div>
       </section>
 
-      <section id="trainers" class="lg:px-16 px-8 py-10">
-        <div
-          class="heading flex flex-col items-center justify-center text-center lg:w-1/2 w-full mx-auto py-6"
-        >
+      <section id="trainer" class="lg:px-16 px-8 py-10">
+        <div class="heading flex flex-col items-center justify-center text-center lg:w-1/2 w-full mx-auto py-6">
           <h2 class="uppercase text-4xl font-medium mb-4">Meet Our Trainers</h2>
-          <p class="leading-7 text-lg text-gray-500">
-            Our trainers are are here to dedicate the time and effort that you
-            need to get in the best shape of your life
-          </p>
+          <p class="leading-7 text-lg text-gray-500">Our trainers are are here to dedicate the time and effort that you need to get in the best shape of your life</p>
         </div>
 
-        <div id="trainers" class="lg:flex justify-between py-3">
-          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
-            <img src="assets/trainer-1.avif" alt="" class="w-full rounded-lg" />
+        <div id="trainers" class="md:flex justify-between py-3">
+          <div class="lg:w-1/3 md:w-1/3 py-3 max-w-xs lg:mx-5 md:mx-2 mx-auto">
+            <img src="assets/trainer-1.avif" class="w-full rounded-lg" alt="">
             <div class="content py-4 text-center">
               <h3 class="text-xl font-bold">Trainer 1</h3>
-              <p>Lorem ipsum</p>
+              <p>
+                Lorem ipsum
+              </p>
             </div>
           </div>
-          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
-            <img src="assets/trainer-2.avif" alt="" class="w-full rounded-lg" />
+          <div class="lg:w-1/3 md:w-1/3 py-3 max-w-xs lg:mx-5 md:mx-2 mx-auto">
+            <img src="assets/trainer-2.avif" class="w-full rounded-lg" alt="">
             <div class="content py-4 text-center">
               <h3 class="text-xl font-bold">Trainer 2</h3>
-              <p>Lorem ipsum</p>
+              <p>
+                dolor sit
+              </p>
             </div>
           </div>
-          <div class="lg:w-1/3 py-3 lg:mx-5 mx-auto max-w-72">
-            <img src="assets/trainer-3.avif" alt="" class="w-full rounded-lg" />
+          <div class="lg:w-1/3 md:w-1/3 py-3 max-w-xs lg:mx-5 md:mx-2 mx-auto">
+            <img src="assets/trainer-3.avif" class="w-full rounded-lg" alt="">
             <div class="content py-4 text-center">
               <h3 class="text-xl font-bold">Trainer 3</h3>
-              <p>Lorem ipsum</p>
+              <p>
+                amet consectetur
+              </p>
             </div>
           </div>
         </div>
+
+
       </section>
     </div>
   </body>
