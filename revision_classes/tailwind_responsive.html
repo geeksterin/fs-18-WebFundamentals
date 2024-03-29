@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsivness</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <nav class="bg-black text-white flex justify-between p-4 items-center">
+            <img class="w-36 " src="https://www.free-css.com/assets/files/free-css-templates/preview/page259/aria/assets/images/logo.svg">
+            <div id="box" class="md:block hidden">
+                <ul class="flex  bg-black w-full md:w-fit flex-col md:flex-row absolute md:relative gap-6 text-md left-0 md:top-0 top-[73px] text-center p-4">
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Intro</li>
+                    <li>Project</li>
+                    <li>Call me</li>
+                    <li>About</li>
+                </ul>
+            </div>
+            <button id="btn" class="p-2 bg-blue-400 text-white rounded-md w-32">Login</button>
+        </nav>
+        <div class="p-8 px-[10%] flex gap-20 md:my-20 my-4 flex-wrap">
+            <div class="md:w-[45%] w-100% flex items-center">
+                <div>
+                    <h1 class="text-2xl font-bold mb-6">We Offer Some Of The Best Business Growth Services In Town</h1>
+                    <p class="text-md my-2">Launching a new company or developing the market position of an existing one can be quite an overwhelming processs at times.</p>
+                    <p class="text-md my-3 italic">"Our mission here at Aira is to get you through those tough moments relying on our team's expertise in starting and growing companies."</p>
+                    <h3 class="font-semibold">Louise Donovan - CEO</h3>
+                </div>
+            </div>
+            <div class="md:w-[45%] overflow-hidden rounded-xl">
+                <img class=" w-[100%] hover:scale-105" src="intro-office.jpg" alt="">
+            </div>
+        </div>
+    </body>
+    <script>
+        document.getElementById("btn").addEventListener("click", function ()
+        {
+            document.getElementById("box").classList.remove("hidden")
+        } )
+    </script>
+</html>

@@ -161,29 +161,36 @@
 
 // console.log("Apples" + 1 + 2 + 3); //Apples123
 
-
 // implicit type conversion(casting)
 // console.log( 1 + "1" ); //11
-
 
 // console.log( 10 * "3" ); //30
 
 // console.log( 1 - "1" ); //0
 
-// console.log( 10  *  "a" ); //NaN 
-
-
+// console.log( 10  *  "a" ); //NaN
 
 // let a = "100";
 
 // a = Number(a); //EXPLICIT TYPE CONVERSION (CASTING)
 // console.log(typeof a);
 
-let a = 100;
-a = Boolean(a);
-console.log(a);
-
+// let a = 100;
+// a = Boolean(a);
+// console.log(a);
 
 // let a = "abc";
 // a = Number(a);
+
 // console.log(a);
+
+// let a = 6;
+// a = toString(a);
+// console.log(typeof a);
+
+var number = prompt("Enter Numeber a");
+var nimber2 = prompt("Enter Number b");
+
+number = Number(number);
+nimber2 = Number(nimber2);
+console.log(number + nimber2);
