@@ -110,7 +110,7 @@
 
 /*
  == checks only for the value on both sides
- == = checks for the value as well as data type on both sides
+ === checks for the value as well as data type on both sides
 */
 
 // console.log(x == y);
