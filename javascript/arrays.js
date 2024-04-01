@@ -76,7 +76,7 @@
 // console.log(numbers.slice(-6, -2));
 // console.log(numbers.slice(-2, -6));
 
-let numbers = [3, 4, 5, 6, 7, 12, 45, 11, 78, 96];
+// let numbers = [3, 4, 5, 6, 7, 12, 45, 11, 78, 96];
 
 // numbers.splice(startingIndex, deleteCount, elementsToAdd)
 
@@ -118,7 +118,6 @@ let numbers = [3, 4, 5, 6, 7, 12, 45, 11, 78, 96];
 
 //toString & join: joins together or binds together the values of an array
 
-
 // console.log(shaktimaan)
 // console.log(shaktimaan.toString())
 
@@ -126,5 +125,24 @@ let numbers = [3, 4, 5, 6, 7, 12, 45, 11, 78, 96];
 // // console.log(typeof shaktimaan.toString())
 // console.log(shaktimaan.join("-"))
 
+let numbers = [5, 3, 1, 80, 3];
+// console.log(numbers);
 
+// delete numbers[2];
 
+// console.log(numbers);
+a = 70;
+b = 40;
+
+function modifiedSort(a, b) {
+  if (a > b) {
+    return -1;
+  } else if (b > a) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+numbers.sort(modifiedSort);
+
+console.log(numbers);
