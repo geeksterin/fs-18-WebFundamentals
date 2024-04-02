@@ -59,13 +59,18 @@
 
 // FUNCTIONS ARE FIRST CLASS CITIZENS IN JS
 
-// function sum(a, b, callback) {
-//   //   console.log(callback);
-//   return callback(a, b);
-// }
 
-// function product(a, b) {
-//   return a * b;
-// }
 
-// console.log(sum(3, 4, product));
+
+
+
+
+function sum(a, b, callback) {
+  return callback(a, b);
+}
+
+function product(a, b) {
+  return a * b;
+}
+
+console.log(sum(3, 4, product));
