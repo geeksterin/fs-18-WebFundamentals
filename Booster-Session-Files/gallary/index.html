@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallary Project</title>
+        <style>
+            .img {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Image Gallary</h1>
+            <input
+                value=""
+                id="address"
+                type="text"
+                placeholder="Enter your image url over here"
+            >
+            <button id="addimage">Add Image</button>
+            <br>
+            <img id="img" class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-wYayLFKc8A1NhsR3c81Vti9Wq_82OFY3Ltv70tzkQA&s">
+            <br>
+            <p id="count">Current Image: 1/1</p>
+            <br>
+            <button id="next">Next</button>
+            <button id="prev">Prev</button>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -11,18 +11,18 @@
 n = 5;
 
 // upper part
-for (let i = 1; i <= n; i++) {
-  out = "";
-  for (let j = i; j >= 1; j--) {
-    out += j.toString() + " ";
-  }
-  console.log(out);
-}
+// for (let i = 1; i <= n; i++) {
+//   out = "";
+//   for (let j = i; j >= 1; j--) {
+//     out += j.toString() + " ";
+//   }
+//   console.log(out);
+// }
 // lower part
-for (let i = n - 1; i >= 1; i--) {
-  out = "";
-  for (let j = i; j >= 1; j--) {
-    out += j.toString() + " ";
-  }
-  console.log(out);
-}
+// for (let i = n - 1; i >= 1; i--) {
+//   out = "";
+//   for (let j = i; j >= 1; j--) {
+//     out += j.toString() + " ";
+//   }
+//   console.log(out);
+// }

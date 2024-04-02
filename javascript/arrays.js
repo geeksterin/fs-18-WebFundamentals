@@ -125,24 +125,53 @@
 // // console.log(typeof shaktimaan.toString())
 // console.log(shaktimaan.join("-"))
 
-let numbers = [5, 3, 1, 80, 3];
+// let numbers = [5, 3, 1, 80, 3];
 // console.log(numbers);
 
 // delete numbers[2];
 
 // console.log(numbers);
-a = 70;
-b = 40;
+// a = 70;
+// b = 40;
 
-function modifiedSort(a, b) {
-  if (a > b) {
-    return -1;
-  } else if (b > a) {
-    return 1;
-  } else {
-    return 0;
-  }
-}
-numbers.sort(modifiedSort);
+// function modifiedSort(a, b) {
+//   if (a > b) {
+//     return -1;
+//   } else if (b > a) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// }
+// numbers.sort(modifiedSort);
 
-console.log(numbers);
+// console.log(numbers);
+
+//
+// console.log(a);
+
+// let a = [78, 67, 3, 4];
+
+/*
+ 1 => ba
+ -1 => ab
+ 0 => original
+
+*/
+// function temp(a, b) {
+//   if (a > b) {
+//     return -1;
+//   } else if (b > a) {
+//     return 1;
+//   } else {
+//     return 0;
+//   }
+// }
+
+// a.sort(temp);
+
+// console.log(a);
+
+// Strings
+a = "hello 0 343 i am ashsih";
+console.log(a);
