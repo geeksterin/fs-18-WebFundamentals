@@ -143,13 +143,32 @@ const name = "abhinandan";
 // }
 // console.log(numbers)
 
+// const nums = [67, 23, 67, 1, 12, 12, 23];
 
-// for(let i=0;i<nums.length;i++) {
-//     let ans;
-//     if(nums[i]!==nums[i+1]);
-//     ans=nums[i];
-//     return ans;
+// let ans = [];
+// for (let i = 0; i < nums.length; i++) {
+//   if (nums[i] !== nums[i + 1]);
+//   ans.push(nums[i]);
 // }
 // console.log(ans);
 
+// function recursion(x) {
+//   if (x > 0) {
+//     console.log(x, " first");
+//     recursion(x - 1);
+//     console.log(x, " second");
+//   }
+// }
+// recursion(4);
 
+// function recursion(x) {
+//   if (x > 0) {
+//     output = output + x;
+//     recursion(x - 1);
+//     output--;
+//   }
+// }
+// let output = 0;
+// recursion(4);
+
+// console.log(output);
