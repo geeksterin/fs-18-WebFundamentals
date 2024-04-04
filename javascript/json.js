@@ -26,3 +26,13 @@ console.log(user);
 user = JSON.parse(user);
 console.log(typeof user);
 console.log(user);
+const obj = {
+  name: "Abhinav",
+  designation: "student",
+  age: 20,
+};
+
+// console.log(JSON.stringify(obj));
+const jsonString = JSON.stringify(obj);
+
+console.log(JSON.parse(jsonString));

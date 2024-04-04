@@ -173,5 +173,124 @@
 // console.log(a);
 
 // Strings
-a = "hello 0 343 i am ashsih";
-console.log(a);
+// a = "hello 0 343 i am ashsih";
+// console.log(a);
+
+//for..of
+
+// const names = ["Ayushi", "Aastha", "Abhinav", "Nawab"];
+
+// FOR OF.....
+// for (let i of names) {
+//   document.write(i + "<br>");
+// }
+
+// CALLBACKS: when a function is called from inside another function.
+
+// function sum(a, b, nawab) {
+//     return nawab(a, b);
+//   }
+
+//   function product(a, b) {
+//     return a * b;
+//   }
+
+//   console.log(sum(3, 4, product));
+
+// FOREACH....
+
+// const names = ["Ayushi", "Aastha", "Abhinav", "Nawab"];
+
+// names.forEach(printName);
+
+// function printName(name){
+//     document.write(name + "<br>")
+// }
+
+// const numbers = [34, 56, 1, 23, 12, 6, 78, 99, 5];
+
+// let oddNumbers = [];
+
+// for(let i=0;i<numbers.length;i++){
+//     if(numbers[i] %2 === 1){
+//         oddNumbers.push(numbers[i])
+//     }
+// }
+
+// numbers.forEach( (num) => {
+//   if (num % 2 === 1) oddNumbers.push(num);
+// });
+
+// console.log(oddNumbers)
+
+// ANONYMOUS FUNCTIONS: a function with no Name
+
+// ARROW FUNCTIONS: an anonymous function with an arrow symbol
+
+// const numbers = [34, 56, 1, 23, 12, 6, 78, 99, 5];
+
+// for(let i=0){
+//     for(let j = i+1){
+
+//     }
+// }
+
+// SORTING AN ARRAY USING FOREACH & AN ANONYMOUS / ARROW FUNCTION AS CALLBACK
+
+// numbers.forEach((num1, index1) => {
+//   numbers.forEach((num2, index2) => {
+//     if (numbers[index1] < numbers[index2]) {
+//       let temp = numbers[index1];
+//       numbers[index1] = numbers[index2];
+//       numbers[index2] = temp;
+//     }
+//   });
+// });
+
+// console.log(numbers);
+
+// const names = ["Ayushi", "Gangadhar", "Nawab", "John"];
+
+// FIND OUT THE LARGEST STRING FROM THE ARRAY USING FOREACH & ARROW FUNCTION
+
+// let largestName = "";
+// names.forEach((name) => {
+//   if (name.length > largestName.length) largestName = name;
+// });
+
+// console.log(largestName);
+
+// names.sort((a, b) => {
+//   return a.length - b.length;
+// });
+// console.log(names[names.length - 1]);
+
+
+// const names = ["Ayushi", "Gangadhar", "Nawab", "John"];
+// const count = [2,3,2,4];
+
+// count.forEach((ele,index)=>{
+//     while(ele > 0){
+//       console.log(names[index])
+//       ele--;
+//     }
+//  })
+
+//  console.log("------------------------")
+
+//  names.forEach((name, index) => {
+//     const repeat = count[index];
+//     for (let j = 0; j < repeat; j++) {
+//       console.log(name);
+//     }
+//   });
+
+
+const a1 = [2,3,4];
+const a2 = [1,2,3,4,5];
+
+// TAKE VALUES FROM a1, ADD ALL THE VALUES FROM a2. THEN ADD ALL THE SUM TOGETHER
+
+
+
+
