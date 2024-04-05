@@ -265,7 +265,6 @@
 // });
 // console.log(names[names.length - 1]);
 
-
 // const names = ["Ayushi", "Gangadhar", "Nawab", "John"];
 // const count = [2,3,2,4];
 
@@ -285,12 +284,51 @@
 //     }
 //   });
 
-
-const a1 = [2,3,4];
-const a2 = [1,2,3,4,5];
+// const a1 = [2, 3, 4];
+// const a2 = [1, 2, 3, 4, 5];
 
 // TAKE VALUES FROM a1, ADD ALL THE VALUES FROM a2. THEN ADD ALL THE SUM TOGETHER
 
+// let a = [6, 7, 8, 9];
+// a.forEach((value, index) => {
+//   console.log(value, index);
+// });
 
+// const a1 = [2, 3, 4];
+// const a2 = [1, 2, 3, 4, 5];
 
+// let sum = 0;
+// for (let i = 0; i < a1.length; i++) {
+//   for (let j = 0; j < a2.length; j++) {
+//     let s = a2[j] + a1[i];
+//     sum += s;
+//   }
+// }
+// a1.forEach((value1) => {
+//   a2.forEach((valu2) => {
+//     let s = value1 + valu2;
+//     sum += s;
+//   });
+// });
+// console.log(sum);
 
+// DSA
+
+strs = ["fliwer", "flig", "flight"];
+
+function solve(values) {
+  ans = "";
+  index = 0;
+  while (true) {
+    let char = values[0][index];
+    for (let j = 0; j < values.length; j++) {
+      let currentStr = values[j];
+      if (currentStr.length <= index) return ans;
+      if (currentStr[index] != char) return ans;
+    }
+    ans += char;
+    index++;
+  }
+}
+
+console.log(solve(strs));
