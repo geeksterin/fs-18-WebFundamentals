@@ -216,13 +216,50 @@ const numbers = [11, 13, 14, 15, 16, 17, 18];
 // })
 // console.log(output);
 
-const occur = [11, 13, 15, 17, 19, 18];
-let fi;
+// const occur = [11, 13, 15, 17, 19, 18];
+// let fi;
 
-occur.forEach((num) => {
-  if (num % 3 === 0 && typeof fi === "undefined") {
-    fi = num;
+// occur.forEach((num) => {
+//   if (num % 3 === 0 && typeof fi === "undefined") {
+//     fi = num;
+//   }
+// });
+
+// console.log(fi);
+
+var threeSum = function (nums) {
+  nums = nums.sort((a, b) => {
+    return a - b;
+  });
+  const output = [];
+  if (nums.length < 3) return;
+  if (nums.length === 3) {
+    if (nums[0] + nums[1] + nums[2] === 0) {
+      const arr = [];
+      arr.push(nums[0], nums[0], nums[0]);
+      if (!output.includes(arr)) output.push(arr);
+    }
+  } else {
+    //-4, -1, -1, 0, 1, 2
+    for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+        for (let k = j + 1; k < nums.length; k++) {
+          if (nums[i] + nums[j] + nums[k] === 0) {
+            const arr = [];
+            arr.push(nums[i], nums[j], nums[k]);
+            console.log(output);
+            console.log(arr);
+            if (!output.includes(arr)) output.push(arr);
+            else {
+              console.log("hello");
+            }
+          }
+        }
+      }
+    }
   }
-});
 
-console.log(fi);
+  return output;
+};
+
+console.log(threeSum([-1, 0, 1, 2, -1, -4]));
