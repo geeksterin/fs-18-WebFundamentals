@@ -10,8 +10,8 @@ const emojiList = [
   },
   {
     emoji: "😃",
-    description: "grinning face with big eyes",
-    category: "Smileys & Emotion",
+    description: "grinning  with big eyes",
+    category: "Smileys & Emotion abcd123",
     aliases: ["smiley"],
     tags: ["happy", "joy", "haha"],
     unicode_version: "6.0",
