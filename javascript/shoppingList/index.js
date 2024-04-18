@@ -47,7 +47,18 @@ function getList(e) {
     if (category.children[1].children.length === 0) return;
     else {
       const heading = category.children[0].children[0].innerText;
-      output += "\n" + heading;
+       output += "\n" + heading +"\n";
+      const item = category.children[1];
+      for(let i=0;i<item.children.length;i++){
+         for(let j=1;j<item.children[i].children.length;j++){
+             if(j == 1){
+              output += "Name-> " +item.children[i].children[j].innerText + " | ";
+             }else{
+              output += "Quantity -> " +item.children[i].children[j].innerText + " ";
+             }
+         }
+         output += "\n";
+      }
     }
   });
   alert(output);
