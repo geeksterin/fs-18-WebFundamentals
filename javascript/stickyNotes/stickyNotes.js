@@ -19,7 +19,7 @@ function createStickyNote() {
   stickyNote.classList.add("note");
 
   const edit = document.createElement("span");
-  edit.innerText = "E";
+  edit.innerHTML = "<i class='fa-solid fa-pencil'></i>";
   edit.addEventListener("click", editStickyNote);
   stickyNote.append(edit);
 
@@ -43,7 +43,8 @@ function removeStickyNote(evt) {
 }
 
 function editStickyNote(evt) {
-  evt.target.parentElement.children[0].contentEditable = true;
+  // evt.target.parentElement.children[0].contentEditable = true;
+  
 }
 
 function makeEditableFalse(evt) {
