@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <input type="text" id="name" placeholder="Enter your name" /><br />
+      <input
+        type="text"
+        id="time"
+        placeholder="Enter time in milliseconds"
+      /><br />
+      <button>Set Alarm</button>
+      <p></p>
+    </div>
+
+    <script>
+      const btn = document.querySelector("button");
+      const name = document.querySelector("#name");
+      const time = document.querySelector("#time");
+      const para = document.querySelector("p");
+
+      btn.addEventListener("click", setAlarmAsync);
+
+      function setAlarmAsync() {
+        setAlarm()
+          .then((response) => {
+            if (response) {
+              setTimeout(() => {
+                para.innerText = "Wake up " + name.value;
+              }, time.value);
+            }
+          })
+          .catch((error) => {
+            para.innerText = error;
+          });
+      }
+
+      function setAlarm() {
+        return new Promise((resolve, reject) => {
+          if (time.value > 1000) resolve(true);
+          else {
+            reject("Invalid Value for time");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
