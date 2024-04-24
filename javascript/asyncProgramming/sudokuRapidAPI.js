@@ -4,8 +4,8 @@ async function getDataFromAPI() {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      "X-RapidAPI-Key": "109c31cdf7mshd5a3d4ba3816a91p14e9b8jsn4cae3a0c2b8b",
-      "X-RapidAPI-Host": "sudoku-generator3.p.rapidapi.com",
+      "X-RapidAPI-Key": "",
+      "X-RapidAPI-Host": "",
     },
     body: {
       difficulty: "easy",
