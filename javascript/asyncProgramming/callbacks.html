@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callbacks & callback hell</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      // SYNCHRONOUS WAY OF CALLING THE FUNCTIONS - NOT GOOD
+
+      // addToCart()
+      // paymentProcess()
+      // checkout()
+      // storeinDB()
+
+      // ASYNCHRONOUS (USING CALLBACKS) WAY OF CALLING THE FUNCTIONS - SLIGHTLY BETTER
+
+      // addToCart(
+      //     paymentProcess(
+      //         checkout(
+      //             storeInDB()
+      //         )
+      //     )
+      // )
+
+      // CALLBACK HELL : TOO DEEP A NESTING OF CALLBACKS, WHICH BECOMES HARDER TO UNDERSTAND AND DEBUG
+
+      // INVERSION OF CONTROL: YOU ARE NOT IN CONTROL OF THE FLOW OF THE CODE
+
+      // PROMISES: THE BEST WAY TO WRITE ASYNC CODE
+
+      // addToCart(() => paymentProcess())
+
+      // addToCart()
+      //   .then(() => paymentProcess())
+      //   .then(() => checkout())
+      //   .then(() => storeInDB())
+      //   .catch(() => {console.log("ERROR")})
+
+
+
+        // sir addtocard hmesha Boolean value return krega next fun me jump krne ke liye ?
+
+    </script>
+  </body>
+</html>
