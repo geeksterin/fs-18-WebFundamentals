@@ -9,10 +9,10 @@
     <div id="wrapper"></div>
 
     <script>
-    //   const person1 = {
-    //     name: "Ibrahim",
-    //     age: 20,
-    //   };
+      //   const person1 = {
+      //     name: "Ibrahim",
+      //     age: 20,
+      //   };
 
       //DEEP COPY: where both copies DO NOT share the same memory location
       //SHALLOW COPY: where both copies DO share the same memory location
@@ -21,22 +21,58 @@
 
       // const person2 = Object.create(person1); //shallow copy
 
-    //   const person2 = { ...person1 }; //SPREAD OPERATOR this is now a DEEP COPY
+      //   const person2 = { ...person1 }; //SPREAD OPERATOR this is now a DEEP COPY
 
-    //   const person2 = JSON.parse(JSON.stringify(person1)); //this is also a deep copy
+      //   const person2 = JSON.parse(JSON.stringify(person1)); //this is also a deep copy
 
       //   console.log(person2);
 
-    //   person2.name = "Masoom";
-    //   console.log(person2.name); //Masoom
-    //   console.log(person1.name); //Masoom
+      //   person2.name = "Masoom";
+      //   console.log(person2.name); //Masoom
+      //   console.log(person1.name); //Masoom
 
+      //STRUCTURED CLONE
 
+      // const obj = {
+      //   name: "Rohit",
+      //   age: 33,
+      //   address: {
+      //     city: "Jaipur",
+      //     state: "Rajasthan",
+      //   },
+      // };
 
-    //STRUCTURED CLONE
+      //NESTED OBJECTS ARE ALWAYS SHALLOW COPIED
 
+      // const obj2 = { ...obj };
+      // const obj2 = JSON.parse(JSON.stringify(obj))
 
+      // obj2.name = "Abhinav";
+      // console.log(obj.name); //Rohit
 
+      // obj2.address.city = "Kolkata";
+
+      // console.log(obj.address.city); //Kolkata
+
+      // const names = ["Nawab", "Atul"];
+
+      // const a = names.push("Ibrahim");
+
+      // const b = names.push("Rachita");
+
+      // console.log(a + b);
+
+      // names.push("Ayushi");
+      // const a = names.pop();
+      // const b = names.pop();
+      // names.unshift(a, b);
+      // console.log(names[0].length + names[names.length - 1].length);
+
+      // const numbers = [1, 2, 3, 4];
+
+      // numbers.map((n) => 2 * n);
+
+      // console.log(numbers);
     </script>
   </body>
 </html>
