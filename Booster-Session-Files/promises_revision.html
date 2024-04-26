@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    let a =  fetch('https://dummyjson.com/products/1')
+    //    a.then((data) => {
+    //     let jsonData = data.json()
+    //     return jsonData
+    //    } ).then(d => console.log(d))
+    //    .catch((err) => console.log(err))
+
+    // let p = new Promise( (resolve,reject) => {
+
+    //     setTimeout(() => reject("Data is Geekser"), 10000)
+    // })
+    // p.then( (data) => console.log("Success",data)).catch(err => console.log("Error",err))
+
+     fetch(" https://pokeapi.co/api/v2/pokemon")
+     .then( data => data.json())
+     .then( res => {
+        let results = res["results"]
+        results.forEach( (item) => {
+            
+            let p = fetch(item.url)
+            p.then(d => d.json())
+            .then(r => {
+                // insert
+                console.log(r)
+            })
+        })
+     })
+     .catch(err => console.logI(err))
+    </script>
+</body>
+</html>

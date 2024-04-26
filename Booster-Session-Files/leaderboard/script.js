@@ -1,22 +1,6 @@
 var scores = [
-    {
-        "firstName":"Ashish",
-        "lastName": "Kumar",
-        "country": "India",
-        "score": 35
-    },
-    {
-        "firstName":"Mahesh",
-        "lastName": "Kumar",
-        "country": "India",
-        "score": 85
-    },
-    {
-        "firstName":"Umesh",
-        "lastName": "Kumar",
-        "country": "India",
-        "score": 90
-    },
+  
+    
 ]
 
 // Sorting Functions
