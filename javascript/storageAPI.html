@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage API</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <input type="text" placeholder="Search Movies" />
+      <button>Search</button>
+      <p></p>
+
+      <button id="delete">Delete Stored Values</button>
+      <button id="deleteAll">Delete Everything</button>
+    </div>
+
+    <script>
+      //   Localstorage: data is stored untill deleted explicitly. Data is shared between session/ tabs
+      //   Sessionstorage: data is stored untill the session lasts. Data is not shared between session/ tabs
+
+      // Data is stored in the form of JSON strings in Storage API.
+
+      localStorage.setItem(
+        "platform",
+        JSON.stringify(["Geekster", "javascript"])
+      );
+
+      const inp = document.querySelector("input");
+      const btn = document.querySelector("button");
+      const para = document.querySelector("p");
+      const del = document.querySelector("#delete");
+      const delAll = document.querySelector("#deleteAll");
+
+      const searchTerms = [];
+
+      btn.addEventListener("click", (e) => {
+        //Store In STORAGE
+        store(inp.value);
+
+        // API CALL
+        para.innerText = JSON.parse(localStorage.getItem("searchTerm"));
+      });
+
+      //   {
+      //     "searchTerm": ["Fukrey", "Harry Potter", "Animal", "DDLJ"]
+      //   }
+
+      // setItem: to store something in Storage,
+      // getItem: to retrieve / fetch something from Storage
+      function store(searchterm) {
+        searchTerms.push(searchterm);
+
+        localStorage.setItem("searchTerm", JSON.stringify(searchTerms));
+      }
+
+      del.addEventListener("click", () => {
+        localStorage.removeItem("searchTerm");
+      });
+
+      delAll.addEventListener("click", () => {
+        localStorage.clear();
+      });
+    </script>
+  </body>
+</html>

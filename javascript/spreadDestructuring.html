@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread & Destructuring</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      //   const numbers = [1, 2, 3];
+
+      //   let a = 1,
+      //     b = 2,
+      //     c = 3;
+
+      //   function sum(a, b, c) {
+      //     console.log(a + b + c);
+      //   }
+      //   sum(...numbers); //6
+
+      // Spread syntax: unpacks / expands an array / object to pass the values from inside, not the array / object itself
+
+      //   const a = [1, 2, 3];
+      //   const b = [4, 5];
+
+      //   //   const c = [a, b]; //[ [1,2,3], [4,5]]
+
+      //   //   console.log(c[0].length);
+
+      // //   const c = [...a, b]; // [1,2,3,[4,5]]
+
+      //     const c=  [...a, ...b]
+
+      //   console.log(c.length); //5
+
+      //   const p1 = {
+      //     name: "Saiqua",
+      //     course: "Javascript",
+      //   };
+
+      //   const p2 = {
+      //     age: 20,
+      //     salary: 30000,
+      //   };
+
+      //   const p3 = { ...p1, ...p2 }; //{name: '', course: '', age: , salary: }
+      //   console.log(Object.keys(p3).length);
+
+      //   const p1 = {
+      //     name: "Saiqua",
+      //     course: "Javascript",
+      //   };
+
+      //   const p2 = {
+      //     name: "Elton",
+      //     course: "Node"
+      //   };
+      //   const p = {
+      //     name: "Elton",
+      //     course: "Node"
+      //   };
+
+      //   const p3 = {...p1, ...p2, ...p} //{name: "Elton", course: "Node"}
+      //   console.log(Object.keys(p3).length);
+
+      // const arr = [2,4,6]
+      // arr[3] = 8;
+      // const arr2 = [...arr]
+
+      // console.log(arr2.length); //3
+
+      // DESTRUCTURING
+
+      // let arr = [1,2,3,4]
+
+      // let a,b,c,d;
+
+      // a = arr[0]
+      // b = arr[1]
+      // c = arr[2]
+      // d = arr[3]
+
+      // console.log(a+b+c+d)
+
+      // let arr = [1,2,3,4]
+
+      // let [a,b,c,d] = arr;
+
+      // console.log(a+b+c+d);
+
+      const person = {
+        name: "Abhinandan",
+        age: 20,
+        profession: "Full Stack Developer",
+      };
+
+      // let n = person.name
+      // let ag = person.age
+      // let prof = person.profession
+
+
+      let { name, age, profession } = person;
+      console.log(name);
+
+    </script>
+  </body>
+</html>
