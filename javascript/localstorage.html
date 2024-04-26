@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <input id="t" type="text" /> 
+    <button id="btn">Save Text</button>
+
+    <div id="names">
+
+    </div>
+
+    <script>
+
+    // If value exist in localstorage then only fethc it
+    // window.addEventListener("load", () => {
+    //     if(localStorage.getItem("username") != null)
+    //     {
+    //         document.getElementById("name").innerText = localStorage.getItem("username")
+    //     }
+    // })
+
+    var names = []
+    // When window is loaded fetch all the names from localstorage if they exist
+    window.addEventListener("load", () => {
+        if(localStorage.getItem("mynames") != null)
+        {
+            names = JSON.parse(localStorage.getItem("mynames"))
+            renderData();
+        }
+    })
+
+    document.getElementById("btn").addEventListener("click",() => {
+        let name = document.getElementById("t").value
+        names.push(name) 
+        // Store the new array in localstorage
+        localStorage.setItem("mynames",JSON.stringify(names))
+        renderData()
+    })  
+
+    function renderData()
+    {
+        document.getElementById("names").innerHTML = "";
+        names.forEach((item) => {
+            let p = document.createElement("p")
+            p.innerText = item;
+            document.getElementById("names").append(p)
+        })
+    }
+
+    </script>
+</body>
+</html>
