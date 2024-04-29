@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounce</title>
+</head>
+<body>
+    <input type="text">
+
+    <p>Normal Text: <span id="normal"></span> </p>
+    <p>Debounce Text: <span id="debounce"></span> </p>
+</body>
+<script>
+    let normal = document.getElementById("normal")
+    let debounceParagraph = document.getElementById("debounce")
+    let input = document.getElementsByTagName("input")[0]
+
+    input.addEventListener("input", (e) => {
+        normal.innerText = e.currentTarget.value
+        // when we call debounce() it reutns us a function so we added 1 more set or bracktes to call the function returned by dedoubce
+        debounce()(e.currentTarget.value)
+
+    })
+    
+    var timeout;
+
+    // Debouce: This function will be responsible for deboucning
+    function debounce()
+    {
+        // clear the prvious timeout
+        if(timeout)
+        clearTimeout(timeout)
+
+        return (text) => {
+          timeout =  setTimeout(() => {
+                debounceParagraph.innerText = text;
+            },1000)
+        }
+    }
+</script>
+</html>
