@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      // closure: a function defined inside another function having access to it's parent's scope. Closures are valid / keep running even after the parent has finished processing
+
+      //   function outer() {
+      //     let counter = 0;
+      //     function inner() {
+      //       counter++;
+      //       console.log(counter);
+      //     }
+      //     return inner;
+      //   }
+
+      //   const fn = outer();
+      //   fn(); //1
+      //   fn(); //2
+      //   fn(); //3
+
+      //   const arr = [1, 2, 3];
+
+      //   arr.forEach(function (x) {
+      //     x = x * 2;
+      //   });
+      //   console.log(arr);
+
+      // function getData(callback) {
+      //     setTimeout(function () {
+      //         callback(null, 'Data');
+      //     }, 2000);
+      // }
+
+      // getData(function (err, data) {
+      //     if (err) {
+      //         console.log('Error:', err);
+      //     } else {
+      //         console.log('Data:', data);
+      //     }
+      // });
+
+      // function asyncOperation(callback) {
+      //     setTimeout(function () {
+      //         callback(true);
+      //     }, 1000);
+      // }
+
+      // asyncOperation(function (value) {
+      //     console.log(value); // What is logged?
+      // });
+
+      // IIFE: Immidiately Invoked Function Expression
+
+      // let count = 0;
+      // (function () {
+      //     if (count === 0) {
+      //         let count = 1;
+      //         console.log(count); // What is logged?
+      //     }
+      //     console.log(count); // What is logged?
+      // })();
+
+    //   let count = 0;
+    //   (function () {
+    //     let count = 20;
+    //     setTimeout(function () {
+    //       count++;
+    //       console.log(count); // What is logged?
+    //     }, 1000);
+    //   })();
+    </script>
+  </body>
+</html>
