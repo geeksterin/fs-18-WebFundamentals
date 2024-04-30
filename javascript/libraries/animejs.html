@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime JS</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 3px solid;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="box">
+        <h3>Anime JS</h3>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+      integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      anime({
+        targets: ".box",
+        translateX: 250,
+        backgroundColor: "#FFF",
+        borderRadius: ["0%", "50%"],
+        easing: "easeInOutQuad",
+        translateX: [100, 250], // from 100 to 250
+        direction: "alternate",
+        loop: true,
+      });
+
+
+      // SET & MAPS, Prototype, OOP
+
+
+
+    //   const img = document.createElement("img")
+    //   img.src = url;
+    //   img.setAttribute("data-aos", "fade-up")
+    //   img.setAttribute("data-aos-duration", "1000")
+    //   img.setAttribute("data-aos-delay", "500")
+
+
+    </script>
+  </body>
+</html>
