@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+    //   const countries = [
+    //     "India",
+    //     "Indonesia",
+    //     "Pakistan",
+    //     "China",
+    //     "Chile",
+    //     "Nepal",
+    //     "Nigeria",
+    //     "Sweden",
+    //     "Spain",        
+    //   ];
+
+      /*
+                    {
+                        i: ["India", "indonesia"],
+                        p: ["Pakistan"]
+                        c: []
+                        n: []
+                        s: ["Sweden", "Spain"]
+                    }
+
+                    */
+
+    //   let output = {
+    //     i: ["India"]
+    //   };
+      
+    //   countries.forEach((country) => {
+    //     const firstLetter = country.slice(0, 1).toLowerCase();
+    //     if (Object.keys(output).includes(firstLetter)) {
+    //       output[firstLetter] = [...output[firstLetter], country];
+    //     } else {
+    //       output[firstLetter] = [country]
+    //     }
+    //   });
+
+    //   console.log(output);
+
+      // countries.forEach()
+
+      //ANUJ
+      //   const result = {}
+      //   countries.forEach((country) => {
+      //     let firstLetter = country[0].toLowerCase();
+      //     if (!result[firstLetter]) {
+      //       result[firstLetter] = [country];
+      //     } else {
+      //       result[firstLetter].push(country);
+      //     }
+      //   });
+
+      //RACHITA
+
+      //   const countries = ["India", "Indonesia", "Sweden", "China", "Chile", "Nepal", "Nigeria"];
+
+      //   let ans = {};
+
+      //   countries.forEach((country) => {
+      //       let c = country.charAt(0);
+
+      //       if(!(c in ans)) {
+      //           ans[c] = [];
+      //       }
+
+      //       ans[c].push(country);
+      //   });
+
+      //   console.log(ans);
+
+      //ELTON
+      //   countries.forEach((ele) => {
+      //     obj[ele.charAt(0)].push(ele);
+      //   });
+
+      //ANIKET
+
+      //   const sortedCountries = {};
+      //   countries.forEach((country) => {
+      //     const firstLetter = country.charAt(0).toUpperCase();
+      //     if (!sortedCountries[firstLetter]) {
+      //       sortedCountries[firstLetter] = [];
+      //     }
+      //     sortedCountries[firstLetter].push(country);
+      //   });
+      //   console.log(sortedCountries);
+    </script>
+  </body>
+</html>
