@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call, Bind, Apply</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      const person = {
+        name: "Anuj",
+        city: "Satna",
+        print: function (state) {
+          return this.name + " from " + this.city + " and " + state;
+        },
+      };
+
+      const person2 = {
+        name: "Anurag",
+        city: "Bulandshahar"
+      }
+
+      //   console.log(person.city)
+      // console.log(person.print())
+
+    //   const cityInMP = person.city;
+
+    //   console.log(cityInMP + " is a city in MP");
+
+
+    // const student = person.print
+    // const newStudent = student.bind(person2, "Uttar Pradesh")    
+    // console.log("Geekster has a student who is:" + newStudent())
+
+    // const student = person.print;
+    // console.log("Geekster has a student who is:" + student.call(person2, "Uttar Pradesh"))
+
+
+
+    </script>
+  </body>
+</html>
