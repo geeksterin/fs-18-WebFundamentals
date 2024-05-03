@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      //   function Person(name, age) {
+      //     this.name = name; // Add properties to the object
+      //     this.age = age;
+      //   }
+      //   const p1 = new Person("Elton", 24);
+
+      //   the name of this constructor should be same as class name ? im i right because in java it should be same
+
+      // a class is a rebranding of prototype based functions
+
+      //   class Person {
+      //     constructor(name, age) {
+      //       this.name = name;
+      //       this.age = age;
+      //     }
+      //   }
+      //   const p1 = new Person("Nawab", 19);
+
+      //   console.log(p1.name)
+      //   console.log(p1.age)
+
+      //   class Animal {
+      //     constructor(name, sound) {
+      //       this.name = name;
+      //       this.sound = sound;
+      //     }
+
+      //     speak() {
+      //       return this.name + " can " + this.sound;
+      //     }
+      //   }
+
+      //   class Dog extends Animal {
+      //     constructor(name, sound) {
+      //       super(name, sound);
+      //     }
+
+      //     speak() {
+      //       return "Sadda kutta " + this.name;
+      //     }
+      //   }
+
+      //   const dog1 = new Dog("Tommy", "Bark");
+      //   const animal1 = new Animal("Tom", "Meow");
+
+      //   console.log(dog1.name);
+      //   console.log(dog1.sound);
+      //   console.log(dog1.speak());
+
+      //   console.log(animal1.speak())
+
+      // PRIVATE VARIABLES
+
+      //   class Animal {
+      //     constructor(name) {
+      //       this._name = name; //PRIVATE VARIABLE
+      //     }
+      //   }
+
+      //   class Dog extends Animal {
+      //     constructor(name) {
+      //       super(name);
+      //     }
+      //   }
+
+      //   const sheru = new Dog("Sheru");
+      //   console.log(sheru._name); //accessible, still to be treated as a private variable and not to be modified directly
+
+      // IN ES6, we can define private vars directly in classes, by using the # keyword
+
+      class Animal {
+        #name; //Private var
+        #sound; //Private var
+        constructor(name, sound) {
+          this.#name = name;
+          this.#sound = sound;
+        }
+
+        getter() {
+          return this.#name + " makes a " + this.#sound + " sound";
+        }
+      }
+
+      class Dog extends Animal {
+        constructor(name, sound) {
+          super(name, sound);
+        }
+      }
+
+      const d1 = new Dog("Tommy", "Barking");
+      //   console.log(d1.#name);
+      //   console.log(d1.#sound);
+
+      console.log(d1.getter());
+    </script>
+  </body>
+</html>

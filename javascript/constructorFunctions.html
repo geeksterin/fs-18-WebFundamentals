@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor Functions</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      // Constructor Function: a blueprint / structure of a function containing methods and/or properties used to create object
+
+      // In JavaScript, a constructor function is a regular function that is used to create objects. It serves as a blueprint or template for creating objects with a specific initial set of properties and methods.
+
+      // Constructor functions are defined with a capitalized name to follow the naming convention.
+
+      // const obj = {}
+
+      //camel case: oneTwoThree
+      //pascal case: OneTwoThree
+
+      function Person(name, age) {
+        this.name = name; // Add properties to the object
+        this.age = age;
+
+        // this.getName = function () {
+        //   return this.name;
+        // };
+      }
+
+      Person.prototype.getName = function () {
+        return this.name;
+      };
+
+      const p1 = new Person("Elton", 24);
+      const p2 = new Person("Abhinav", 22);
+      const p3 = new Person("Rachita", 21);
+      const p4 = new Person("Nawab", 19);
+      const p5 = new Person("Mohit", 15);
+
+      //const p1 = {
+      //     name: 'Elton',
+      //     age: 24,
+      // getName: function(){
+      //     return this.name;
+      // }
+      //   }
+
+      //To create an object instance from a constructor function, you need to use the new keyword followed by a call to the constructor function with the appropriate arguments.
+
+      // by using new on line 32, we are binding the "this" inside the function with p1 object
+
+      //The new object is linked to the constructor function's prototype, allowing it to inherit properties and methods from the prototype
+
+      //   The newly created object is returned (implicitly if the constructor doesn't have an explicit return statement).
+
+      //   p1.name //Elton
+      //   p1.age //24
+
+      // p1.profession = "Full Stack Developer"
+
+      // Instead of adding the method inside the constructor,  you can add methods to the constructor's prototype, which will be shared among all instances created from that constructor.
+
+      console.log(p1.getName());
+      console.log(p2.getName());
+      console.log(p3.getName());
+      console.log(p4.getName());
+      console.log(p5.getName());
+
+      //PROTOTYPAL INHERITANCE
+    </script>
+  </body>
+</html>
