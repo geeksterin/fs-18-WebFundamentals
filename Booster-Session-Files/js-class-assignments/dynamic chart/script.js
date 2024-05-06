@@ -15,6 +15,32 @@ var mychart = new Chart("box", {
 
         ]
     },
+    options: { 
+        legend: {
+            labels: {
+                fontColor: "blue",
+                fontSize: 18
+            }
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    fontColor: "green",
+                    fontSize: 18,
+                    stepSize: 1,
+                    beginAtZero: true
+                }
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: "purple",
+                    fontSize: 14,
+                    stepSize: 1,
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
    
 });
 
