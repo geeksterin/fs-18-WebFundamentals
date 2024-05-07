@@ -1,5 +1,5 @@
 
-var data = [45];
+var data = [45,57];
 
 var mychart = new Chart("box", {
     type: "line",

@@ -2,10 +2,12 @@ const coinImage = document.querySelector(".single-crypto-details .left");
 const coinDetails = document.querySelector(".single-crypto-details .right");
 
 // console.log(window.location.href);
+console.log("Plain Url",window.location.href)
 const currentURL = new URL(window.location.href);
+console.log("Current URL", currentURL)
 // console.log(currentURL);
 const params = new URLSearchParams(currentURL.search);
-
+console.log("Params ",params)
 // console.log(params);
 
 if (!params.has("id")) {
