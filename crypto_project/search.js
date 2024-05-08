@@ -2,22 +2,36 @@ const form = document.querySelector("form");
 const input = document.querySelector("form input");
 const searchResults = document.querySelector("#search-results");
 
-form.addEventListener("submit", searchCrypto);
+const currentURL = new URL(window.location.href);
+const searchParams = new URLSearchParams(currentURL.search);
 
-async function searchCrypto(e) {
-  e.preventDefault();
-
-  if (input.value.length > 0) {
-    const response = await getDataFromAPI(
-      "https://api.coingecko.com/api/v3/search?query=" + input.value
-    );
+if (searchParams.has("query")) {
+  getDataFromAPI(
+    "https://api.coingecko.com/api/v3/search?query=" + searchParams.get("query")
+  ).then((response) => {
     console.log(response);
     showSearchResults(response.coins);
-  }
+  });
+} else {
+  document.querySelector("footer").classList.add("bottom");
 }
 
+// form.addEventListener("submit", searchCrypto);
+
+// async function searchCrypto(e) {
+//   e.preventDefault();
+
+//   if (input.value.length > 0) {
+//     const response = await getDataFromAPI(
+//       "https://api.coingecko.com/api/v3/search?query=" + input.value
+//     );
+//     console.log(response);
+//     showSearchResults(response.coins);
+//   }
+// }
+
 function showSearchResults(coins) {
-//   console.log(coins);
+  //   console.log(coins);
   coins.forEach((coin, index) => {
     const result = document.createElement("div");
     result.classList.add("result");
@@ -42,6 +56,7 @@ function showSearchResults(coins) {
     rightDiv.classList.add("right");
 
     const anchor = document.createElement("a");
+    anchor.classList.add("btn");
     anchor.innerText = "More Info";
     anchor.href = "details.html?id=" + coin.id;
 
