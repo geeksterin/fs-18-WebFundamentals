@@ -8,6 +8,7 @@ window.addEventListener("load", async () => {
     "https://api.coingecko.com/api/v3/search/trending"
   );
 
+  
   showTrendingCoins(response.coins, exchangeRate.bitcoin.inr);
 });
 
