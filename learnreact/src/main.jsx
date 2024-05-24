@@ -7,7 +7,9 @@ import ReactDOM from "react-dom/client";
 // import Sum from "./Sum";
 
 // import ArrayOfObjects from "./ArrayOfObjects";
-import Counter from "./Counter";
+// import Counter from "./Counter";
+// import ToggleImage from "./ToggleImage";
+import ShoppingCart from "./ShoppingCart";
 import "./style.css";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,6 +25,6 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<Counter />);
+root.render(<ShoppingCart />);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"
