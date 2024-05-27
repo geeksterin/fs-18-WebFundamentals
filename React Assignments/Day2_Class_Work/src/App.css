@@ -1,0 +1,14 @@
+.center {
+  text-align: center;
+}
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+ p {
+  font-size: 15px;
+ }
+
+ .main {
+  width: 500px;
+  margin: auto;
+ }
