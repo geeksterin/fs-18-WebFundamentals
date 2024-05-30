@@ -16,6 +16,15 @@
   border-radius: 10px;
   padding: 1rem;
 }
-.box img{
-    width: 100%;
+.box img {
+  width: 100%;
+}
+.box h3 {
+  display: flex;
+}
+.box .content{
+  display: none;
+}
+.box .content.visible {
+  display: block;
 }

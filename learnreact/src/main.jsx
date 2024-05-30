@@ -10,8 +10,12 @@ import ReactDOM from "react-dom/client";
 // import Counter from "./Counter";
 // import ToggleImage from "./ToggleImage";
 // import ShoppingCart from "./ShoppingCart";
-import TodoList from "./TodoList";
-import "./style.css";
+// import TodoList from "./TodoList";
+// import "./style.css";
+
+// import BoxHideShow from "./BoxHideShow";
+
+import Main from "./ecommerce/Main";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -26,6 +30,6 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<TodoList />);
+root.render(<Main />);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"

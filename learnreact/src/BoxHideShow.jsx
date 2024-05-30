@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./boxshowhide.css";
+import Box from "./Box";
+
 function BoxHideShow() {
   const [toggleDiv, setToggleDiv] = useState({
     box1: true,
@@ -7,23 +9,17 @@ function BoxHideShow() {
     box3: true,
   });
 
-  function handleToggle(text) {
-    // console.log(text);
-    const updatedText = text.toLowerCase().replace(" ", "");
-    // const toggleDivCopy = toggleDiv;
-    // toggleDivCopy[updatedText] = false;
-    setToggleDiv((prevState) => {
-      prevState[updatedText] = false;
-    });
-  }
-
-  console.log(toggleDiv);
-
   return (
     <>
-      <div className="box" id="box1">
-        <h3 onClick={(e) => handleToggle(e.target.innerHTML)}>Box 1</h3>
-        <div className="content" style={toggleDiv[this.id] ? {display: "block"} : {display: "none"}}>
+      <Box boxName="Box 1" toggleDiv={toggleDiv} id="box1" setToggleDiv={setToggleDiv} />
+      <Box boxName="Box 2" toggleDiv={toggleDiv} id="box2" setToggleDiv={setToggleDiv} />
+      <Box boxName="Box 3" toggleDiv={toggleDiv} id="box3" setToggleDiv={setToggleDiv} />
+
+      {/* <div className="box" id="box1">
+        <h3>
+          Box 1 <ArrowDropDownIcon />
+        </h3>
+        <div className="content">
           <img src="https://placehold.co/300x150" />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi
@@ -35,8 +31,10 @@ function BoxHideShow() {
       </div>
 
       <div className="box" id="box2">
-        <h3 onClick={(e) => handleToggle(e.target.innerHTML)}>Box 2</h3>
-        <div className="content" style={toggleDiv[this.id] ? {display: "block"} : {display: "none"}}>
+        <h3>
+          Box 2 <ArrowDropDownIcon />
+        </h3>
+        <div className="content">
           <img src="https://placehold.co/300x150" />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi
@@ -48,8 +46,10 @@ function BoxHideShow() {
       </div>
 
       <div className="box" id="box3">
-        <h3 onClick={(e) => handleToggle(e.target.innerHTML)}>Box 3</h3>
-        <div className="content" style={toggleDiv[this.id] ? {display: "block"} : {display: "none"}}>
+        <h3>
+          Box 3 <ArrowDropDownIcon />
+        </h3>
+        <div className="content">
           <img src="https://placehold.co/300x150" />
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut modi
@@ -58,7 +58,7 @@ function BoxHideShow() {
             magnam!
           </p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
