@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./ecommerce.css";
 import Product from "./Product";
-import Header from "./Header";
 
-function Main() {
+function Main({ cart, setCart, handleAddToCart }) {
   // fetch("https://fakestoreapi.com/products")
   // .then((response) => response.json())
   // .then((result) => console.log(result));
@@ -16,17 +16,24 @@ function Main() {
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((result) => {
-      console.log(result.data);
+      // console.log(result.data);
       setProducts(result.data);
     });
   }, []);
 
+  console.log(cart);
+
   return (
     <>
-      <Header />
       <div id="products">
         {products.map((product, index) => {
-          return <Product key={index} product={product} />;
+          return (
+            <Product
+              key={index}
+              product={product}
+              handleAddToCart={handleAddToCart}
+            />
+          );
         })}
       </div>
     </>

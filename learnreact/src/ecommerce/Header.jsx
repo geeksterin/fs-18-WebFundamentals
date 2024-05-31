@@ -1,19 +1,25 @@
-function Header() {
+/* eslint-disable react/prop-types */
+import { NavLink } from "react-router-dom";
+
+function Header({cart}) {
   return (
     <header>
       <h1>Ecommerce</h1>
       <ul>
         <li>
-          <a href="">Home</a>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <a href="">About</a>
+          <NavLink to="/about">About</NavLink>
         </li>
         <li>
-          <a href="">Blog</a>
+          <NavLink to="/blog">Blog</NavLink>
         </li>
         <li>
-          <a href="">Contact Us</a>
+          <NavLink to="/contact">Contact Us</NavLink>
+        </li>
+        <li>
+          <NavLink to="/cart">Cart <span>{cart.length}</span></NavLink>
         </li>
       </ul>
     </header>
