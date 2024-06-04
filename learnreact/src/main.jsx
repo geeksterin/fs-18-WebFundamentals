@@ -11,13 +11,14 @@ import ReactDOM from "react-dom/client";
 // import ToggleImage from "./ToggleImage";
 // import ShoppingCart from "./ShoppingCart";
 // import TodoList from "./TodoList";
+import UseCallback from "./memoize/UseCallback";
 // import "./style.css";
 
 // import BoxHideShow from "./BoxHideShow";
 
 // import Main from "./ecommerce/Main";
 // import Home from "./ecommerce/Home";
-import Main from "./generatePassword/Main";
+// import Main from "./generatePassword/Main";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -32,6 +33,6 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<Main />);
+root.render(<UseCallback />);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"
