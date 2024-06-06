@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+}
+header img {
+  width: 120px;
+}
+.btn {
+  padding: 6px 20px;
+  border: 2px solid #e31316;
+  border-radius: 5px;
+  background-color: #e93d3f;
+  color: #fff;
+  transition: all 300ms ease;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #e93d3f;
+}
+main {
+  padding: 3rem;
+}
+#hero {
+  background-image: url(assets/main_image.svg);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: contain;
+  min-height: 60vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+#hero h1 {
+  font-size: 3.5rem;
+}
+#hero h1,
+#hero p {
+  margin-bottom: 0.5rem;
+}
+#hero .btn {
+  margin-top: 0.5rem;
+}
+
+#topCoins {
+  margin: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
+.coins {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.coins::-webkit-scrollbar{
+    display: none;
+}
+.trending-coin {
+  min-width: 25rem;
+}
