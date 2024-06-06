@@ -7,8 +7,8 @@ const output = document.querySelector("p");
 // the argument passed to event handler contains information about the event
 
 textarea.addEventListener("keyup", (e) => {
-    console.log(e);
-  //   output.innerText = e.target.value.split("").reverse().join("");
+    // console.log(e);
+    output.innerText = e.target.value.split("").reverse().join("");
 
-  if (e.key === "r" || e.key === "R") alert("Nahi Dabana tha");
+  // if (e.key === "r" || e.key === "R") alert("Nahi Dabana tha");
 });
