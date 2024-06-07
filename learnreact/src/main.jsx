@@ -19,7 +19,8 @@ import ReactDOM from "react-dom/client";
 // import BoxHideShow from "./BoxHideShow";
 
 // import Main from "./ecommerce/Main";
-import Home from "./ecommerce/Home";
+// import Home from "./ecommerce/Home";
+import Home from "./ecommerceWithContext/Home.jsx";
 // import Main from "./routing/Main";
 // import Main from "./generatePassword/Main";
 
