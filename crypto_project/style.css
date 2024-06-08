@@ -84,8 +84,9 @@ main {
   overflow-y: hidden;
   overflow-x: scroll;
 }
+
 .coins-wrapper::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 .coins {
   min-width: 20rem;

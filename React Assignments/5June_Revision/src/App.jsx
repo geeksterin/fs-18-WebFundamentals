@@ -1,27 +1,21 @@
 import "./App.css";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
+import Child from "./components/Child";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [flag, setFlag] = useState(false);
 
-  const expensiveTask = (n) => {
-    // expensive calucation
-    console.log("Expensive Calculation is Going on");
-    for (let i = 0; i <= 1000000; i++) {}
-    return n + 20;
-  };
-
-  let result = useMemo(() => {
-    return expensiveTask(count);
-  }, [count]);
+  const sayHi = useCallback(() => {
+    return () => {
+      console.log("HI");
+    };
+  }, []);
 
   return (
     <div>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>Change 1</button>
-      <button onClick={() => setFlag(!flag)}>Toggle Flag</button>
-      <p>Expensive Result: {result}</p>
+      <Child func={sayHi} />
     </div>
   );
 }

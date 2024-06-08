@@ -11,13 +11,17 @@ import ReactDOM from "react-dom/client";
 // import ToggleImage from "./ToggleImage";
 // import ShoppingCart from "./ShoppingCart";
 // import TodoList from "./TodoList";
-import UseCallback from "./memoize/UseCallback";
+// import UseCallback from "./memoize/UseCallback";
+// import UseMemo from "./memoize/UseMemo";
+// import UsingRef from "./memoize/UsingRef";
 // import "./style.css";
 
 // import BoxHideShow from "./BoxHideShow";
 
 // import Main from "./ecommerce/Main";
 // import Home from "./ecommerce/Home";
+import Home from "./ecommerceWithContext/Home.jsx";
+// import Main from "./routing/Main";
 // import Main from "./generatePassword/Main";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
@@ -33,6 +37,6 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<UseCallback />);
+root.render(<Home />);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"
