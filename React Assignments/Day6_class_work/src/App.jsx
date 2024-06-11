@@ -41,7 +41,6 @@ function App() {
             type="range"
             min="1000"
             max="10000"
-            value={homevalue}
           />
         </div>
         <div>
