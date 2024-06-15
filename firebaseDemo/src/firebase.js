@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDSM2vaNufO90tlVM1xNooSlQr4aNOMvgQ",
-  authDomain: "geekster-ecommerce.firebaseapp.com",
-  projectId: "geekster-ecommerce",
-  storageBucket: "geekster-ecommerce.appspot.com",
-  messagingSenderId: "367342105111",
-  appId: "1:367342105111:web:41dbfed03f77fdc3102252",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
