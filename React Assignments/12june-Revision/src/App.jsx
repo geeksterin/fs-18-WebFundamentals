@@ -22,6 +22,7 @@ function App() {
             <Route path="posts" element={<Post />} />
             <Route path="connections" element={<Connections />} />
           </Route>
+          
         </Routes>
       </AuthContext.Provider>
     </div>
