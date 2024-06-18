@@ -33,7 +33,6 @@ function Home() {
     temp.forEach((obj) => {
       obj.quantity = 1;
     });
-    
 
     localStorage.setItem("cart", JSON.stringify(temp));
   }, [cart]);

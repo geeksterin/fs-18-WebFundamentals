@@ -4,6 +4,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { ecomContext } from "./Home";
 
+///DAY 3
+
 function Header() {
   const { cart } = useContext(ecomContext);
 
