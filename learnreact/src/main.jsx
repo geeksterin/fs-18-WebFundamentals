@@ -20,9 +20,10 @@ import ReactDOM from "react-dom/client";
 
 // import Main from "./ecommerce/Main";
 // import Home from "./ecommerce/Home";
-import Home from "./ecommerceWithContext/Home.jsx";
+// import Home from "./ecommerceWithContext/Home.jsx";
 // import Main from "./routing/Main";
 // import Main from "./generatePassword/Main";
+import Todo from './usingUseReducer/Todo'
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -37,6 +38,6 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<Home />);
+root.render(<Todo />);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"
