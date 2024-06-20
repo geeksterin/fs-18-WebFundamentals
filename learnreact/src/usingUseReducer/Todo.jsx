@@ -12,17 +12,36 @@ function Todo() {
         return state.filter((task) => {
           return task.id !== action.payload;
         });
+
+      case "EDIT_TASK":
+        return state.map((task) =>
+          task.id === action.payload.id
+            ? { ...task, text: action.payload.text }
+            : task
+        );
     }
   }
 
   const [inputValue, setInputValue] = useState("");
-  //   const [tasks, setTasks] = useState([]);
+  const [isEditing, setIsEditing] = useState(false);
   const [tasks, dispatch] = useReducer(todoReducer, []);
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (isEditing) {
+      dispatch({
+        type: "EDIT_TASK",
+        payload: { id: isEditing.id, text: inputValue },
+      });
+      setIsEditing(false);
+    }
     dispatch({ type: "ADD_TASK", payload: inputValue });
     setInputValue("");
+  }
+
+  function handleInitialEdit(e, task) {
+    setInputValue(task.text);
+    setIsEditing(task);
   }
 
   console.log(tasks);
@@ -36,7 +55,9 @@ function Todo() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <button type="submit">Add Task</button>
+        <button type="submit">
+          {isEditing === false ? "Add Task" : "Edit Task"}
+        </button>
       </form>
       <ul>
         {tasks.map((task, index) => {
@@ -48,7 +69,7 @@ function Todo() {
                   dispatch({ type: "DELETE_TASK", payload: task.id })
                 }
               />
-              <AiFillEdit />
+              <AiFillEdit onClick={(e) => handleInitialEdit(e, task)} />
             </li>
           );
         })}
