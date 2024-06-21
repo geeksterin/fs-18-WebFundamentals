@@ -25,7 +25,10 @@ import ReactDOM from "react-dom/client";
 // import Main from "./generatePassword/Main";
 // import Todo from './usingUseReducer/Todo'
 
-import Counter from "./react-reduxToolkit/Counter";
+import store from "./react-reduxToolkit/store";
+// import Counter from "./react-reduxToolkit/Counter";
+import Todo from "./react-reduxToolkit/Todo";
+import { Provider } from "react-redux";
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
 //   <React.StrictMode>
@@ -40,6 +43,10 @@ const root = ReactDOM.createRoot(document.querySelector("#dump"));
 // root.render(<Sum a={a} b={b} />);
 // root.render(<Sum num={[a, b]} />);
 // root.render(<ArrayOfObjects />);
-root.render(<Counter />);
+root.render(
+  <Provider store={store}>
+    <Todo />
+  </Provider>
+);
 
 // document.createElement("h1").innerText = "Hello Geeksters, are you having fun....!"
