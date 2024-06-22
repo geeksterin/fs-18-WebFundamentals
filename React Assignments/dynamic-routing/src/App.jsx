@@ -9,6 +9,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
       </Routes>
+
+      <h1>{count}</h1>
     </div>
   );
 }
