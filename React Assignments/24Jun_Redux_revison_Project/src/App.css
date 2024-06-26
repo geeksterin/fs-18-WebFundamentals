@@ -1,0 +1,18 @@
+.board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 250px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
