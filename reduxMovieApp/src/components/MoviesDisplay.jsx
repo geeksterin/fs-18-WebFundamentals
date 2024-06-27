@@ -1,19 +1,30 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useState } from "react";
+import MovieDisplay from "./MovieDisplay.jsx";
 
-const img_base_path = "https://image.tmdb.org/t/p/original/";
+function MoviesDisplay({ heading, option1, option2, choice1, choice2 }) {
+  const [visible, setVisible] = useState(true);
 
-function MoviesDisplay({ data }) {
   return (
     <>
-      {data.map((movie, index) => {
-        return (
-          <div className="movieBlock" key={index}>
-            <img src={img_base_path + movie.poster_path} alt={movie.title} />
-            <h3>{movie.title || movie.original_title}</h3>
-          </div>
-        );
-      })}
+      <section id="movieDisplay">
+        <header>
+          <h2>{heading}</h2>
+          <p>
+            <span onClick={() => setVisible(true)}>{choice1}</span>
+            <span onClick={() => setVisible(false)}>{choice2}</span>
+          </p>
+        </header>
+        <section id="movieWrapper">
+          {visible
+            ? option1.map((movie, index) => {
+                return <MovieDisplay key={index} movie={movie} />;
+              })
+            : option2.map((movie, index) => {
+                return <MovieDisplay key={index} movie={movie} />;
+              })}
+        </section>
+      </section>
     </>
   );
 }
