@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
+@import url("tldraw/tldraw.css");
+
+body {
+    font-family: "Inter";
+}
+
+.btn-my {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 1000;
+    background-color: dodgerblue;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.btn-my:hover {
+    cursor: pointer;
+}
