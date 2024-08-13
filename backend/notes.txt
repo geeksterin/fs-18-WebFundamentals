@@ -1,0 +1,31 @@
+slack.com => 161.76.76.78 => DNS
+
+
+REpresentative State Transfer API:
+
+1. Stateless: which does not store any state.
+2. Client(react) & the server(node) have to be 2 separate entities.
+3. Uniformity: a uniform way of communicating with the server irrespective of the device.
+4. Cacheable: where each response defines itself as Cacheable or non Cacheable.
+
+POSTMAN
+
+Released in 2009 by Ryan Dahl
+
+Runtime Environment: An environment created by installing one or more tools so as we are able to write a program and are able to execute that program and view its output.
+
+Comprises of 2 things: V8Engine(Google Chrome) + Libuv
+
+
+Features of NodeJS:
+1. Single Threaded:
+2. Asynchronous:
+3. Event Driven: events can also be user defined
+#EventEmitter class
+4. Open Source:
+5. Performance:
+6. Highly Scalable: APIs, create servers, Desktop Apps(with help of Electron)
+7. NPM (Node Package Manager):
+
+
+THREAD: A thread in Node.js is a separate execution context in a single process. It is a lightweight, independent unit of processing that can run in parallel with other threads within the same process. It resides within process memory and it has an execution pointer. It has a stack of its own but a shared heap of the process.
