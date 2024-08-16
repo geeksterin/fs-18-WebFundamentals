@@ -22,11 +22,42 @@
 //   rl.close();
 // });
 
+// const names = ["Ram", "Shyam", "Seeta", "Geeta"];
+
 import fs from "fs";
 
-fs.writeFile("newFile.txt", "This file is created with Node", (err) => {
-  if (err) console.log("There is some error. Your file cannot be created");
-});
+// console.log("first");
 
-// readFile, appendFile, unlink
-// readFileSync, writeFileSync
+// fs.writeFile("hello.txt", "This file is created via NODE JS", (err) => {
+//   if (err) console.log(err);
+//   console.log("File Created");
+// });
+// fs.writeFileSync("hello.txt", "This file is created via NODE JS");
+
+// console.log("second");
+
+// // fs.readFile("hello.txt", "utf8", (err, data) => {
+// //   if (err) console.log(err);
+// //   console.log(data);
+// // });
+
+// console.log(fs.readFileSync("hello.txt", "utf8"));
+
+// console.log("third");
+
+// fs.unlink("hello.txt", (err) => {
+//   if (err) console.log("File cannot be deleted due to: " + err);
+//   else  console.log("File Successully deleted");
+// });
+
+// fs.writeFile("hello.txt", "Hi there", (err) => {
+//   if (err) console.log(err);
+// });
+
+// fs.writeFile("hello.txt", "My name is Rohit", (err) => {
+//   if (err) console.log(err);
+// });
+
+// fs.appendFile("hello.txt", "I am a Full Stack Trainer", (err) => {
+//   if (err) console.log(err);
+// });

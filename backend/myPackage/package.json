@@ -1,0 +1,20 @@
+{
+  "name": "my-utilities-packages",
+  "version": "1.0.0",
+  "description": "This package helps users to create their own versions(polyfills) of memoize functions, etc",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "memoize",
+    "currying",
+    "debouncing",
+    "call",
+    "bind",
+    "apply"
+  ],
+  "author": "Rohit Jain",
+  "license": "ISC"
+}

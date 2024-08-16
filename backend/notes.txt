@@ -29,3 +29,14 @@ Features of NodeJS:
 
 
 THREAD: A thread in Node.js is a separate execution context in a single process. It is a lightweight, independent unit of processing that can run in parallel with other threads within the same process. It resides within process memory and it has an execution pointer. It has a stack of its own but a shared heap of the process.
+
+
+
+In Package.json: when a version is written like this: 6.24.1
+In this 
+6: major version
+24: minor version
+1: patch
+
+~ : allows changes only in patch
+^ : allows changes in patch as well as minor versions
