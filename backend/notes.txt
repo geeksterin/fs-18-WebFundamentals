@@ -40,3 +40,8 @@ In this
 
 ~ : allows changes only in patch
 ^ : allows changes in patch as well as minor versions
+
+Web Scraping: To scrape / scratch / get the contents from a webpage into our project. The content can be text / html / css / js.
+Tools: Axios / Cheerio / Puppeteer
+
+Syntax in cheerio is very similar to jQuery
