@@ -13,6 +13,7 @@ const port = 8080;
 // btn.addEventListener("click,", () => {})
 // btn.addEventListener("hover,", () => {})
 
+
 const server = http.createServer((request, response) => {
   if (request.method === "GET") {
     response.writeHead(200, { "Content-Type": "application/json" });
@@ -52,7 +53,6 @@ const server = http.createServer((request, response) => {
   } else if (request.method === "DELETE") {
     // filter out id from request.url in a variable
     // apply filter on cars and filter out the object where id matches
-    
   }
 });
 

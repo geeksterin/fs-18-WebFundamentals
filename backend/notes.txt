@@ -45,3 +45,23 @@ Web Scraping: To scrape / scratch / get the contents from a webpage into our pro
 Tools: Axios / Cheerio / Puppeteer
 
 Syntax in cheerio is very similar to jQuery
+
+
+
+HOW TO INSTALL MONGODB:
+- Search "mongodb community server". Open first link and download Server.
+- Install server with all the default settings. DO NOT CHANGE ANYTHING WHILE INSTALLING.
+- Search "mongodb shell". Open first link and download shell.
+- Extract downloaded zip. Cut the extracted folder and put it in "C" drive.
+- Open mongo shell folder, go to bin. Copy the path from address bar and set it as an Environment variable.
+- Open C->Program Files->mongodb->server->7.0-> go to bin. Copy the path from address bar and set it as an Environment variable.
+- Create a folder "data" in "C".
+- Inside folder data, create another folder "db".
+
+
+TYPES OF MIDDLEWARES:
+1. Application level middleware
+2. Router-level middleware
+3. Error handling middleware
+4. Built in middleware
+5. Third Party middleware
