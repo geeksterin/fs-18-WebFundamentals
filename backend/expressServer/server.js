@@ -8,6 +8,8 @@ let cars = [
 ];
 
 import express from "express";
+import mongoose from "mongoose";
+
 const app = express();
 
 app.use(express.urlencoded({ extended: false })); //allow data in body with incoming requests
@@ -17,14 +19,38 @@ app.use(express.json()); //allow only JSON data in body
 const port = 6969;
 const hostname = "127.0.0.1";
 
-app.get("/products", (req, res) => {
-  res.status(200).send(cars);
+mongoose.connect("mongodb://127.0.0.1:27017/").then(() => {
+  app.listen(port, hostname, () =>
+    console.log("Server started at port " + port)
+  );
+});
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  age: {
+    type: Number,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+});
+
+const userModel = mongoose.model("user", userSchema);
+
+app.get("/users", async (req, res) => {
+  const dataFromDB = await userModel.find({});
+  res.status(200).send(dataFromDB);
 });
 
 app.post("/addProduct", (req, res) => {
   //   console.log(req.body); //{"id", "make", "model"}
   const newCar = req.body;
-  cars.push(newCar);
+  cars.push(newCar); //Spread Operator
   res.send(cars);
 });
 
@@ -50,4 +76,8 @@ app.delete("/deleteProduct/:id", (req, res) => {
   res.send(remainingCars);
 });
 
-app.listen(port, hostname, () => console.log("Server started at port " + port));
+// Daemon: Database
+
+// Shell
+
+// Win + R: cmd
