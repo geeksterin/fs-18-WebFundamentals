@@ -111,3 +111,14 @@ db.COLLECTION_NAME.find({city: "Haldwani"}).count(): Find all documents with cit
 
 db.COLLECTION_NAME.find({city: "Haldwani"}).limit(5): Find all documents with city as Haldwani and limit the results to 5
 
+
+
+
+
+
+//Regular Expression (Regex)
+
+// rohitjainwebdev@gmail . com
+
+//[a-zA-Z0-9\.\_]+@[a-zA-Z0-9\.\-]+.[a-zA-Z]{2,5}
+
