@@ -65,3 +65,60 @@ TYPES OF MIDDLEWARES:
 3. Error handling middleware
 4. Built in middleware
 5. Third Party middleware
+
+
+
+
+IMPORTANT TERMS:
+
+Database: a place to store data. Combination of collections.
+
+Collection: storage for common type of data. (table in terms of SQL)
+
+Document: information / data of a single type of resource (a user, a product, an order....) (row in terms of SQL)
+
+
+COMMANDS:
+show dbs: shows all databases (Dbs with no collections are not shown)
+
+use {DATABASE NAME}: to create new database / to switch to an existing database
+
+db.createCollection(COLLECTION_NAME): Creates collection
+
+db.COLLECTION_NAME.drop(): To drop(delete) the collection
+
+show collections: Shows the collections in the current database
+
+db.dropDatabase(): To drop(delete) the databse
+
+db.COLLECTION_NAME.insertOne({}): inserts a document (row)
+
+db.COLLECTION_NAME.insertMany({}, {}): inserts multiple documents (rows)
+
+db.COLLECTION_NAME.find({})
+
+db.COLLECTION_NAME.find({_id: ObjectId("SOME ID")})
+
+db.COLLECTION_NAME.find({name: "Nawab"})
+
+db.COLLECTION_NAME.find({age: {$gt: 20}})
+
+db.COLLECTION_NAME.find({age: {$lt: 20}})
+
+db.COLLECTION_NAME.find({city: "Haldwani"})
+
+db.COLLECTION_NAME.find({city: "Haldwani"}).count(): Find all documents with city as Haldwani
+
+db.COLLECTION_NAME.find({city: "Haldwani"}).limit(5): Find all documents with city as Haldwani and limit the results to 5
+
+
+
+
+
+
+//Regular Expression (Regex)
+
+// rohitjainwebdev@gmail . com
+
+//[a-zA-Z0-9\.\_]+@[a-zA-Z0-9\.\-]+.[a-zA-Z]{2,5}
+
