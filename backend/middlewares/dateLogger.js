@@ -1,4 +1,4 @@
-import fs, { access } from "fs";
+import fs from "fs";
 
 // toISOString() - MDN
 
