@@ -41,7 +41,7 @@ function AddUser() {
         name="photo"
         onChange={(e) => setPhoto(e.target.files[0])}
       />
-      <button type="submit">Register</button>
+      <button type="submit">Add User</button>
     </form>
   );
 }
