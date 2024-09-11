@@ -61,7 +61,7 @@ export async function loginUser(req, res) {
 
   const savedUser = await registerModel.findOne({
     $or: [{ email: emailOrUser }, { username: emailOrUser }],
-  }).select("-apiKey", "__v");
+  }).select("-apiKey", "-__v", "-_id");
 
   if (!savedUser) {
     res.status(404).send("Invalid Credentials");
