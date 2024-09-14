@@ -1,35 +1,78 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import FileUpload from "./components/FileUpload";
+import FileList from "./components/FileList";
+import SendEmailForm from "./components/SendEmailForm";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [files, setFiles] = useState(null);
+  const [savedFiles, setSavedFiles] = useState(null);
 
+  const [email, setEmail] = useState("");
+  const [uuid, setUUID] = useState("");
+
+  useEffect(() => {
+    fetchFiles();
+  }, []);
+
+  async function fetchFiles() {
+    try {
+      const response = await axios.get("http://localhost:8081/api");
+      // console.log(response.data);
+      setSavedFiles(response.data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  function handleChange(e) {
+    setFiles(e.target.files[0]);
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    try {
+      const data = new FormData();
+      data.append("file", files);
+
+      const response = await axios.post(
+        "http://localhost:8081/api/uploadFiles",
+        data
+      );
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  async function handleEmailSubmit(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8081/api/files/send",
+        { email, uuid }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>File Sharing Application</h1>
+      <FileUpload handleChange={handleChange} handleSubmit={handleSubmit} />
+      {savedFiles && <FileList savedFiles={savedFiles} />}
+      {/* {savedFiles ? <FileList savedFiles={savedFiles} /> : ""} */}
+
+      <SendEmailForm
+        handleEmailSubmit={handleEmailSubmit}
+        email={email}
+        uuid={uuid}
+        setEmail={setEmail}
+        setUUID={setUUID}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -4,7 +4,7 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import FileRouter from "./routes/fileRouter.js";
 
-const port = process.env.PORT ;
+const port = process.env.PORT;
 
 const app = express();
 app.use(cors({ origin: "*" }));
