@@ -1,6 +1,24 @@
 /* eslint-disable react/prop-types */
 
-function SendEmailForm({ handleEmailSubmit, email, uuid, setEmail, setUUID }) {
+import { useState } from "react";
+import axios from "axios";
+
+function SendEmailForm() {
+  const [email, setEmail] = useState("");
+  const [uuid, setUUID] = useState("");
+
+  async function handleEmailSubmit(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:8081/api/files/send",
+        { email, uuid }
+      );
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <>
       <h3>Send File By Email</h3>

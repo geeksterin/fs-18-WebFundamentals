@@ -5,11 +5,7 @@ import FileList from "./components/FileList";
 import SendEmailForm from "./components/SendEmailForm";
 
 function App() {
-  const [files, setFiles] = useState(null);
   const [savedFiles, setSavedFiles] = useState(null);
-
-  const [email, setEmail] = useState("");
-  const [uuid, setUUID] = useState("");
 
   useEffect(() => {
     fetchFiles();
@@ -25,15 +21,10 @@ function App() {
     }
   }
 
-  function handleChange(e) {
-    setFiles(e.target.files[0]);
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit(file) {
     try {
       const data = new FormData();
-      data.append("file", files);
+      data.append("file", file);
 
       const response = await axios.post(
         "http://localhost:8081/api/uploadFiles",
@@ -45,32 +36,14 @@ function App() {
     }
   }
 
-  async function handleEmailSubmit(e) {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        "http://localhost:8081/api/files/send",
-        { email, uuid }
-      );
-      console.log(response);
-    } catch (err) {
-      console.log(err);
-    }
-  }
   return (
     <>
       <h1>File Sharing Application</h1>
-      <FileUpload handleChange={handleChange} handleSubmit={handleSubmit} />
+      <FileUpload handleSubmit={handleSubmit} />
       {savedFiles && <FileList savedFiles={savedFiles} />}
       {/* {savedFiles ? <FileList savedFiles={savedFiles} /> : ""} */}
 
-      <SendEmailForm
-        handleEmailSubmit={handleEmailSubmit}
-        email={email}
-        uuid={uuid}
-        setEmail={setEmail}
-        setUUID={setUUID}
-      />
+      <SendEmailForm />
     </>
   );
 }
