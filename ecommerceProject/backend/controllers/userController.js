@@ -16,24 +16,56 @@ export async function registerUser(req, res) {
 }
 
 export async function loginUser(req, res) {
-  const { email, password } = req.body;
-  //find user
-  //match password
+  try {
+    const { email, password } = req.body;
 
-  const checkUser = await userModel.findOne({ email: email }).exec();
-  //   console.log(checkUser);
-  if (!checkUser) {
-    res.status(404).json({ error: "Invalid Credentials" });
+    const checkUser = await userModel.findOne({ email }).exec();
+
+    if (!checkUser) {
+      res.status(404).json({ error: "Invalid Credentials" });
+    }
+
+    const check = bcrypt.compare(password, checkUser.password);
+    if (!check) res.status(404).json({ error: "Invalid Credentials" });
+
+    //Create a token using JWT
+    const token = generateToken(checkUser);
+
+    // How to send token to frontend?
+    //1. sending token in response body, saving it in localStorage in frontend
+    //2. sending token as a server only cookie (http only cookie): securing it from XSS attacks(Cross site scripting attack)
+
+    // // Option 1: Send token in response body
+    // res.status(200).json({
+    //   message: "Login successful",
+    //   token,
+    // });
+
+    res
+      .cookie("auth_token", token, {
+        httpOnly: true,
+        secure: false, //as we are working with localhost, which runs on http, not on https
+        sameSite: "none",
+        maxAge: 3600000,
+      })
+      .status(200)
+      .json({
+        message: "Login Successful",
+      });
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
+}
 
-  const check = bcrypt.compare(password, checkUser.password);
-  if (!check) res.status(404).json({ error: "Invalid Credentials" });
-
-  //CREATE A TOKEN
-  console.log(generateToken());
-
-  // COOKIE, ls 
-
-  //LOG USER IN
-
+export async function logoutUser(req, res) {
+  try {
+    res.clearCookie("auth_token", {
+      httpOnly: true,
+      secure: false,
+      sameSite: "none",
+    });
+    res.status(200).json({ message: "Logout successfully" });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
 }
