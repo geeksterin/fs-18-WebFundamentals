@@ -17,16 +17,24 @@ export async function registerUser(req, res) {
 
 export async function loginUser(req, res) {
   try {
-    const { email, password } = req.body;
+    const { email, password, role } = req.body;
 
     const checkUser = await userModel.findOne({ email }).exec();
 
-    if (!checkUser) {
-      res.status(404).json({ error: "Invalid Credentials" });
-    }
+    // if (!checkUser) {
+    //   res.status(404).json({ error: "Invalid Credentials" });
+    // }
 
-    const check = bcrypt.compare(password, checkUser.password);
-    if (!check) res.status(404).json({ error: "Invalid Credentials" });
+    // const check = bcrypt.compare(password, checkUser.password);
+    // if (!check) res.status(404).json({ error: "Invalid Credentials" });
+
+    if (
+      !checkUser ||
+      !bcrypt.compare(password, checkUser.password) ||
+      checkUser.role !== role
+    ) {
+      res.status(401).json({ error: "Invalid Credentials" });
+    }
 
     //Create a token using JWT
     const token = generateToken(checkUser);
@@ -45,7 +53,7 @@ export async function loginUser(req, res) {
       .cookie("auth_token", token, {
         httpOnly: true,
         secure: false, //as we are working with localhost, which runs on http, not on https
-        sameSite: "none",
+        sameSite: "strict",
         maxAge: 3600000,
       })
       .status(200)
@@ -68,4 +76,9 @@ export async function logoutUser(req, res) {
   } catch (err) {
     res.status(500).json({ error: err });
   }
+}
+
+export function isUserLoggedIn(req, res) {
+  console.log(req);
+  res.json({ user: req.user });
 }
