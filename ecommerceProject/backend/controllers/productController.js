@@ -30,5 +30,26 @@ export async function createProduct(req, res) {
 }
 
 //FETCH ALL PRODCUCT
+export async function getAllProducts(req, res) {
+  const allProducts = await productModel.find({});
+  res.json(allProducts);
+}
+
+export async function deleteProduct(req, res) {
+  try {
+    const idToDelete = req.params.id;
+    const productDeleted = await productModel.findByIdAndDelete(idToDelete);
+    if (productDeleted) res.json({ message: "Product Deleted" });
+  } catch (err) {
+    res.status(500).json({ error: err });
+  }
+}
+
 //FETCH A SINGLE PRODCUCT
+
+export async function getSingleProduct(req, res) {
+  const idToFind = req.params.id;
+  const singleProduct = await productModel.findById({ _id: idToFind });
+  res.json(singleProduct);
+}
 //SORTING BY PRICE / CATEGORY / BRAND

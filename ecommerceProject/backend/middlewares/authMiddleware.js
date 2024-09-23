@@ -1,11 +1,13 @@
 import jwt from "jsonwebtoken";
 import { userModel } from "../models/userModel.js";
+import "dotenv/config";
 
 async function authMiddleware(req, res, next) {
   try {
-    // console.log(req.cookies.auth_token);
-
     const { auth_token } = req.cookies;
+
+    if (!auth_token) return;
+
     const decoded_token = jwt.verify(auth_token, process.env.SECRET);
 
     const loggedInUser = await userModel.findById(decoded_token.userID);
