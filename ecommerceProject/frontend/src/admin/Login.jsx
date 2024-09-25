@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios from "./axiosConfig";
 import Dashboard from "./Dashboard";
 import { useNavigate } from "react-router-dom";
 
@@ -16,13 +16,9 @@ function Login() {
 
   async function isUserLoggedIn() {
     try {
-      const response = await axios.get(
-        "http://localhost:8080/api/user/loggedIn",
-        {
-          withCredentials: true,
-        }
-      );
+      const response = await axios.get("/user/loggedIn");
       if (response.statusText === "OK") setIsLoggedIn(true);
+      else setIsLoggedIn(false);
     } catch (err) {
       console.log("Error checking login status: " + err);
     }
@@ -31,17 +27,11 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/user/login",
-        {
-          email,
-          password,
-          role: "admin",
-        },
-        {
-          withCredentials: true,
-        }
-      );
+      const response = await axios.post("/user/login", {
+        email,
+        password,
+        role: "admin",
+      });
       console.log(response);
       navigate("/admin/dashboard");
       //   console.log(document.cookie);
@@ -53,7 +43,7 @@ function Login() {
   return (
     <>
       {isLoggedIn ? (
-        <Dashboard setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
+        <Dashboard setIsLoggedIn={setIsLoggedIn} />
       ) : (
         <>
           <h2>Admin Login</h2>

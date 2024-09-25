@@ -21,45 +21,42 @@ export async function loginUser(req, res) {
 
     const checkUser = await userModel.findOne({ email }).exec();
 
-    // if (!checkUser) {
-    //   res.status(404).json({ error: "Invalid Credentials" });
-    // }
-
-    // const check = bcrypt.compare(password, checkUser.password);
-    // if (!check) res.status(404).json({ error: "Invalid Credentials" });
-
-    if (
-      !checkUser ||
-      !bcrypt.compare(password, checkUser.password) ||
-      checkUser.role !== role
-    ) {
-      res.status(401).json({ error: "Invalid Credentials" });
+    if (!checkUser) {
+      res.status(404).json({ error: "Invalid Credentials" });
     }
 
-    //Create a token using JWT
-    const token = generateToken(checkUser);
+    const check = await bcrypt.compare(password, checkUser.password);
 
-    // How to send token to frontend?
-    //1. sending token in response body, saving it in localStorage in frontend
-    //2. sending token as a server only cookie (http only cookie): securing it from XSS attacks(Cross site scripting attack)
+    if (!check) {
+      return res.status(404).json({ error: "Invalid Credentials" });
+    }
 
-    // // Option 1: Send token in response body
-    // res.status(200).json({
-    //   message: "Login successful",
-    //   token,
-    // });
+    if (checkUser.role === role) {
+      //Create a token using JWT
+      const token = generateToken(checkUser);
 
-    res
-      .cookie("auth_token", token, {
-        httpOnly: true,
-        secure: false, //as we are working with localhost, which runs on http, not on https
-        sameSite: "strict",
-        maxAge: 3600000,
-      })
-      .status(200)
-      .json({
-        message: "Login Successful",
-      });
+      // How to send token to frontend?
+      //1. sending token in response body, saving it in localStorage in frontend
+      //2. sending token as a server only cookie (http only cookie): securing it from XSS attacks(Cross site scripting attack)
+
+      // // Option 1: Send token in response body
+      // res.status(200).json({
+      //   message: "Login successful",
+      //   token,
+      // });
+
+      res
+        .cookie("auth_token", token, {
+          httpOnly: true,
+          secure: false, //as we are working with localhost, which runs on http, not on https
+          sameSite: "strict",
+          maxAge: 3600000,
+        })
+        .status(200)
+        .json({
+          message: "Login Successful",
+        });
+    }
   } catch (err) {
     res.status(500).json({ error: err });
   }
@@ -70,7 +67,7 @@ export async function logoutUser(req, res) {
     res.clearCookie("auth_token", {
       httpOnly: true,
       secure: false,
-      sameSite: "none",
+      sameSite: "strict",
     });
     res.status(200).json({ message: "Logout successfully" });
   } catch (err) {
@@ -79,6 +76,6 @@ export async function logoutUser(req, res) {
 }
 
 export function isUserLoggedIn(req, res) {
-  console.log(req);
+  // console.log(req);
   res.json({ user: req.user });
 }
