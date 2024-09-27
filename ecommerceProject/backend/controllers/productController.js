@@ -1,26 +1,24 @@
 import { productModel } from "../models/productModel.js";
+import { uploadToCloudinary } from "../services/cloudinaryUpload.js";
 
 export async function createProduct(req, res) {
   try {
-    let {
-      name,
-      brand,
-      category,
-      price,
-      description,
-      inStock,
-      inventory,
-      addedBy,
-    } = req.body;
+    let url = await uploadToCloudinary(req);
+    // console.log(url);
+
+    let { name, brand, category, price, description, inStock, inventory } =
+      req.body;
+    // console.log(req.user);
     const product = new productModel({
       name,
+      url,
       brand,
       category,
       price,
       description,
       inStock,
       inventory,
-      addedBy,
+      addedBy: req.user._id,
     });
     await product.save();
     res.status(201).json({ message: "product added" });

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import instance from "./axiosConfig";
 
 function Dashboard({ setIsLoggedIn }) {
@@ -97,6 +97,7 @@ function Dashboard({ setIsLoggedIn }) {
             })}
           </tbody>
         </table>
+        <Link to="/admin/add">Add a New Product</Link>
       </main>
     </>
   );

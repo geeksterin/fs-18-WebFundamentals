@@ -15,6 +15,7 @@ async function authMiddleware(req, res, next) {
     if (!loggedInUser) res.status(401).json({ message: "User not found" });
 
     req.user = loggedInUser;
+    // console.log(req.user);
     next();
   } catch (err) {
     console.log(err);

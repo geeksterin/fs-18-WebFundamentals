@@ -4,10 +4,12 @@ import {
   getAllProducts,
   deleteProduct,
 } from "../controllers/productController.js";
+import upload from "../middlewares/upload.js";
+import authMiddleware from "../middlewares/authMiddleware.js";
 
 const productRouter = express.Router();
 
-productRouter.post("/", createProduct);
+productRouter.post("/", authMiddleware, upload.single("url"), createProduct);
 productRouter.get("/", getAllProducts);
 productRouter.delete("/:id", deleteProduct);
 
