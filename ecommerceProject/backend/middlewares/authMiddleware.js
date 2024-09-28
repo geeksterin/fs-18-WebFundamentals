@@ -12,7 +12,7 @@ async function authMiddleware(req, res, next) {
 
     const loggedInUser = await userModel.findById(decoded_token.userID);
 
-    if (!loggedInUser) res.status(401).json({ message: "User not found" });
+    if (!loggedInUser) res.status(500).json({ message: "User not found" });
 
     req.user = loggedInUser;
     // console.log(req.user);

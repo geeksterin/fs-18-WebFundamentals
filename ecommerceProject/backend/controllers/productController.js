@@ -1,4 +1,5 @@
 import { productModel } from "../models/productModel.js";
+import { userModel } from "../models/userModel.js";
 import { uploadToCloudinary } from "../services/cloudinaryUpload.js";
 
 export async function createProduct(req, res) {
@@ -103,4 +104,33 @@ export async function getSingleProduct(req, res) {
   const singleProduct = await productModel.findById({ _id: idToFind });
   res.json(singleProduct);
 }
-//SORTING BY PRICE / CATEGORY / BRAND
+
+export async function addToWishlist(req, res) {
+  const { productID } = req.params;
+  const userID = req.user._id;
+  let updatedUser;
+
+  //GATHER ALL THE DATA FOR THIS USER
+
+  //CHECK WHETHER PRODUCT IS ALREADY ADDED
+  const user = req.user;
+  const existingProduct = user.wishlist.find((ids) => ids === productID);
+  if (!existingProduct) {
+    //push productID into wishlist
+    updatedUser = await userModel.findByIdAndUpdate(
+      userID,
+      { $push: { wishlist: productID } },
+      { new: true }
+    );
+  } else {
+    //remove productID from wishlist
+    updatedUser = await userModel.findByIdAndUpdate(
+      userID,
+      {
+        $pull: { wishlist: productID },
+      },
+      { new: true }
+    );
+  }
+  res.json(updatedUser);
+}

@@ -4,24 +4,30 @@ const userSchema = new mongoose.Schema(
   {
     firstname: {
       type: String,
-      requred: true,
+      required: true,
     },
     lastname: {
       type: String,
-      requred: true,
+      required: true,
     },
     email: {
       type: String,
-      requred: true,
+      required: true,
     },
     password: {
       type: String,
-      requred: true,
+      required: true,
     },
     role: {
       type: String,
-      requred: true,
+      required: true,
     },
+    wishlist: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "product",
+      },
+    ],
   },
   { timestamps: true }
 );
