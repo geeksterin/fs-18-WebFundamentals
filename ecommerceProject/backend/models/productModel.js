@@ -10,6 +10,14 @@ const productSchema = new mongoose.Schema(
     description: { type: String },
     inStock: { type: Boolean, default: true },
     inventory: { type: Number, required: true },
+    ratings: [
+      {
+        star: Number,
+        comment: String,
+        postedBy: { type: mongoose.Schema.Types.ObjectId, ref: "user" },
+      },
+    ],
+    totalRating: { type: Number },
     addedBy: { type: mongoose.Types.ObjectId, ref: "User", required: true },
   },
   { timestamps: true }

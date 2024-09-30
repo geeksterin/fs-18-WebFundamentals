@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import { productModel } from "../models/productModel.js";
 import { userModel } from "../models/userModel.js";
 import { uploadToCloudinary } from "../services/cloudinaryUpload.js";
@@ -106,15 +107,21 @@ export async function getSingleProduct(req, res) {
 }
 
 export async function addToWishlist(req, res) {
-  const { productID } = req.params;
+  let { productID } = req.params;
   const userID = req.user._id;
   let updatedUser;
+
+  productID = new mongoose.Types.ObjectId(productID);
 
   //GATHER ALL THE DATA FOR THIS USER
 
   //CHECK WHETHER PRODUCT IS ALREADY ADDED
   const user = req.user;
-  const existingProduct = user.wishlist.find((ids) => ids === productID);
+
+  const existingProduct = user.wishlist.find((ids) => ids.equals(productID));
+
+  // console.log(existingProduct, productID);
+
   if (!existingProduct) {
     //push productID into wishlist
     updatedUser = await userModel.findByIdAndUpdate(
@@ -133,4 +140,85 @@ export async function addToWishlist(req, res) {
     );
   }
   res.json(updatedUser);
+}
+
+export async function rating(req, res) {
+  let { starRating, comment, productID } = req.body;
+  const userID = req.user._id;
+
+  // productID = new mongoose.Types.ObjectId(productID);
+
+  try {
+    //FIND THE PRODUCT BY ID
+    const product = await productModel.findById(productID);
+
+    //CHECK IF THE USER HAS ALREADY RATED THE PRODUCT
+    const alreadyRated = product.ratings.find(
+      (ratingObj) => ratingObj.postedBy.toString() === userID.toString()
+    );
+
+    let updatedProduct;
+
+    if (alreadyRated) {
+      //IF ALREADY RATED:
+      // UPDATE THE RATING
+
+      updatedProduct = await productModel.findOneAndUpdate(
+        {
+          _id: productID,
+          "ratings.postedBy": userID,
+        },
+        {
+          $set: {
+            "ratings.$.comment": comment,
+            "ratings.$.star": starRating,
+          },
+        },
+        { new: true }
+      );
+    } else {
+      //IF IT'S A NEW RATING:
+      // ADD A NEW RATING
+
+      updatedProduct = await productModel.findByIdAndUpdate(
+        productID,
+        {
+          $push: {
+            ratings: {
+              star: starRating,
+              comment: comment,
+              postedBy: userID,
+            },
+          },
+        },
+        { new: true }
+      );
+    }
+
+    // RECALCULATE TOTAL RATING
+
+    // GET TOTAL NUMBER OF RATINGS
+    const totalRating = updatedProduct.ratings.length;
+
+    // GET THE SUM OF ALL STARS
+    const ratingSum = updatedProduct.ratings.reduce((accumulator, current) => {
+      return accumulator + current.star;
+    }, 0);
+
+    // GET THE AVERAGE
+    const actualRating = ratingSum / totalRating;
+
+    console.log(totalRating, ratingSum, actualRating);
+
+    // UPDATE PRODUCT WITH NEW TOTAL RATING
+    const finalProduct = await productModel.findByIdAndUpdate(
+      productID,
+      { totalRating: actualRating.toFixed(2) },
+      { new: true }
+    );
+
+    res.json(finalProduct);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }

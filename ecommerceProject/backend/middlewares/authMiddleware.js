@@ -4,11 +4,14 @@ import "dotenv/config";
 
 async function authMiddleware(req, res, next) {
   try {
-    const { auth_token } = req.cookies;
+    // const { tempToken } = req.cookies || req.body;
+    const { tempToken } = req.body;
+    // console.log(req.body);
+    // return;
 
-    if (!auth_token) return;
+    if (!tempToken) return;
 
-    const decoded_token = jwt.verify(auth_token, process.env.SECRET);
+    const decoded_token = jwt.verify(tempToken, process.env.SECRET);
 
     const loggedInUser = await userModel.findById(decoded_token.userID);
 
