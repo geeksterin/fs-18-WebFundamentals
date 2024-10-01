@@ -12,9 +12,15 @@ const couponSchema = new Schema(
       type: Number,
       required: true,
     },
+    isPercentage: {
+      type: Boolean,
+      default: false,
+    },
     expiryDate: {
       type: Date,
-      required: true,
+      default: function () {
+        return new Date(Date.now() + 21 * 24 * 60 * 60 * 1000);
+      },
     },
     isActive: {
       type: Boolean,
@@ -46,4 +52,4 @@ const couponSchema = new Schema(
 
 const couponModel = model("Coupon", couponSchema);
 
-export default Coupon;
+export default couponModel;

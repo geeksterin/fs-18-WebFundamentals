@@ -4,13 +4,14 @@ import "dotenv/config";
 import mongoose from "mongoose";
 import ecomRouter from "./routes/ecomRoutes.js";
 import productRouter from "./routes/productRoutes.js";
+import couponRouter from "./routes/couponRoutes.js";
+import cartRouter from "./routes/couponRoutes.js";
 import cookieParser from "cookie-parser";
 
 const corsOptions = {
   origin: "http://localhost:5173", // Your frontend origin
   credentials: true, // This allows the server to accept cookies
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"], // Allowed methods
-  
 };
 // {
 //   Authorization: Bearer 34rddit8034fioe905rueiohfioew8y54894efhuoewihr8943hfiuo4tu
@@ -24,6 +25,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", ecomRouter);
 app.use("/api/product", productRouter);
+app.use("/api/coupon", couponRouter);
+app.use("/api/cart", cartRouter);
 
 try {
   await mongoose.connect(
