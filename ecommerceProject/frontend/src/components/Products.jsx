@@ -21,7 +21,7 @@ function Products() {
   return (
     <>
       {products.length > 0 && (
-        <section id="products" className="py-4 px-12 flex flex-wrap gap-4">
+        <section id="products" className="w-3/4 py-4 px-12 flex flex-wrap gap-4">
           <DisplayProducts products={products} />
         </section>
       )}

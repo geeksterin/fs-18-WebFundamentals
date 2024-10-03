@@ -7,7 +7,6 @@ import productRouter from "./routes/productRoutes.js";
 import couponRouter from "./routes/couponRoutes.js";
 import cartRouter from "./routes/couponRoutes.js";
 import cookieParser from "cookie-parser";
-import authRouter from "./routes/authRoutes.js";
 
 const corsOptions = {
   origin: "http://localhost:5173", // Your frontend origin
@@ -28,7 +27,6 @@ app.use("/api", ecomRouter);
 app.use("/api/product", productRouter);
 app.use("/api/coupon", couponRouter);
 app.use("/api/cart", cartRouter);
-app.use("/api/check", authRouter);
 
 try {
   await mongoose.connect(

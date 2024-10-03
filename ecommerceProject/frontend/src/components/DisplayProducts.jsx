@@ -9,7 +9,7 @@ function DisplayProducts({ products }) {
           <div className="product w-1/5" key={index}>
             <Link to={`product/${product._id}`}>
               <img
-                src={product.url}
+                src={product.url ? product.url : "https://placehold.co/100"}
                 className="w-full object-contain h-28"
                 alt=""
               />

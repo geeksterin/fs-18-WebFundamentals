@@ -9,13 +9,13 @@ async function authMiddleware(req, res, next) {
     // console.log(req.body);
     // return;
 
-    if (!tempToken) return res.status(200).json({ error: "Token not found" });
+    if (!tempToken) return;
 
     const decoded_token = jwt.verify(tempToken, process.env.SECRET);
 
     const loggedInUser = await userModel.findById(decoded_token.userID);
 
-    if (!loggedInUser) res.status(200).json({ error: "User not found" });
+    if (!loggedInUser) res.status(500).json({ message: "User not found" });
 
     req.user = loggedInUser;
     // console.log(req.user);

@@ -1,14 +1,16 @@
 import { useState } from "react";
-import axios from "axios";
+import axios from "../axiosConfig";
 import { Link } from "react-router-dom";
 
 function Register() {
+  const searchParams = new URLSearchParams(window.location.search);
+
   const [user, setUser] = useState({
-    fname: "",
-    lname: "",
+    firstname: "",
+    lastname: "",
     email: "",
     password: "",
-    role: "",
+    role: "user",
   });
   const [registrationStatus, setRegistrationStatus] = useState(null);
 
@@ -19,10 +21,8 @@ function Register() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post(
-      "http://localhost:8080/api/user/register",
-      { ...user }
-    );
+    const response = await axios.post("/user/register", { ...user });
+
     if (response.data.message === "success" || response.status === 201)
       setRegistrationStatus(true);
     else setRegistrationStatus(false);
@@ -32,7 +32,17 @@ function Register() {
     <>
       {registrationStatus !== null ? (
         <h3>
-          You can <Link to="/login">login</Link> now
+          You can
+          <Link
+            to={
+              searchParams.has("back_to")
+                ? `/login?back_to=${searchParams.getAll("back_to").join("")}`
+                : `/login`
+            }
+          >
+            login
+          </Link>
+          now
         </h3>
       ) : registrationStatus === false ? (
         <h3>There was some problem. Try back later</h3>
@@ -43,16 +53,16 @@ function Register() {
         <input
           type="text"
           placeholder="First Name"
-          name="fname"
-          value={user.fname}
+          name="firstname"
+          value={user.firstname}
           onChange={handleChange}
         />
         <br />
         <input
           type="text"
           placeholder="Last Name"
-          name="lname"
-          value={user.lname}
+          name="lastname"
+          value={user.lastname}
           onChange={handleChange}
         />
         <br />
@@ -71,11 +81,6 @@ function Register() {
           value={user.password}
           onChange={handleChange}
         />
-        <br />
-        <select name="" id="" value={user.role} onChange={handleChange}>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select>
         <br />
         <button type="submit">Register</button>
       </form>
