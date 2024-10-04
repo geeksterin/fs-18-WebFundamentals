@@ -27,7 +27,10 @@ function Login() {
       response.data.message === "Login Successful"
     ) {
       setIsUserLoggedin((prev) => true);
-      navigate("/");
+      
+      searchParams.has("back_to")
+        ? navigate(searchParams.getAll("back_to").join(""))
+        : navigate("/");
     } else {
       setLoginErr(true);
     }

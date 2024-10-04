@@ -7,8 +7,23 @@ import { createContext, useEffect, useState } from "react";
 import axios from "./axiosConfig";
 import Login from "./pages/Login";
 import Register from "./components/Register";
+import Cart from "./pages/Cart";
+import Wishlist from "./pages/Wishlist";
+import ProtectedRoute from "./ProtectedRoute";
 
 export const userContext = createContext();
+export const cartContext = createContext();
+
+async function fetchData() {
+  try {
+    const response = await axios.get("/check/me", {
+      validateStatus: false,
+    });
+    return response.status === 200 && response.data.user;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 function App() {
   const [isUserLoggedIn, setIsUserLoggedin] = useState(false);
@@ -16,27 +31,18 @@ function App() {
   const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get("/check/me", {
-          validateStatus: false,
-        });
-        // console.log(response);
-        if (response.status === 200 && response.data.user)
-          setIsUserLoggedin((prevValue) => response.data.user);
-        else console.log("User is not logged in");
-      } catch (error) {
-        console.log(error);
-      }
+    async function temp() {
+      const response = await fetchData();
+      if (response) setIsUserLoggedin(true);
     }
-    fetchData();
+    temp();
   }, []);
 
   function addToWishlist(productToAdd) {
-    // if (!isUserLoggedIn) navigate("/login");
+    setWishlist([...wishlist, productToAdd]);
   }
   function addToCart(productToAdd) {
-    // if (!isUserLoggedIn) navigate("/login");
+    setCart([...cart, productToAdd]);
   }
 
   return (
@@ -46,20 +52,36 @@ function App() {
           value={{
             isUserLoggedIn,
             setIsUserLoggedin,
-            cart,
-            wishlist,
-            addToCart,
-            addToWishlist,
           }}
         >
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/product/:id" element={<SingleProduct />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Routes>
-          <Footer />
+          <cartContext.Provider
+            value={{ cart, addToCart, wishlist, addToWishlist }}
+          >
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/product/:id" element={<SingleProduct />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route
+                path="/cart"
+                element={
+                  <ProtectedRoute>
+                    <Cart />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/wishlist"
+                element={
+                  <ProtectedRoute>
+                    <Wishlist />
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+            <Footer />
+          </cartContext.Provider>
         </userContext.Provider>
       </BrowserRouter>
     </>

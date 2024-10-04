@@ -16,13 +16,13 @@ const cartSchema = new Schema(
             value: String,
           },
         ],
-        orderBy: {
-          type: Schema.Types.ObjectId,
-          ref: "user",
-        },
-        cartTotal: Number,
       },
     ],
+    orderBy: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+    },
+    cartTotal: Number,
   },
   { timestamps: true }
 );
